@@ -1,4 +1,4 @@
-# Product Hunt — Postwave (Coming Soon)
+# Product Hunt — OPC.Dino (Coming Soon)
 
 > Phase: PH "Coming Soon" page (pre-launch waitlist on PH itself)
 > Goal: collect upvote-pledges from PH users before actual launch day
@@ -33,8 +33,8 @@ Voiceover: "Building takes months. Launching is one day. Then nothing."
 Visual: timer counting 90 days → empty waitlist counter "4 signups"
 
 [0:12–0:22] DEMO — paste URL
-Voiceover: "Postwave changes one thing. You paste your product URL —"
-Visual: cursor pastes "yourproduct.com" into Postwave
+Voiceover: "OPC.Dino changes one thing. You paste your product URL —"
+Visual: cursor pastes "yourproduct.com" into OPC.Dino
 
 [0:22–0:35] DEMO — multi-platform output
 Voiceover: "— and AI generates native-format content for every platform.
@@ -53,7 +53,7 @@ Visual: pricing card + lock icon
 
 [0:55–1:00] CTA
 Voiceover: "Phase 0 waitlist open now. First hundred get fifty percent off year one."
-Visual: postwave.so URL + "Join Waitlist" button glow
+Visual: opcdino.so URL + "Join Waitlist" button glow
 ```
 
 ---
@@ -71,8 +71,8 @@ Visual: postwave.so URL + "Join Waitlist" button glow
 画面：90 天倒计时 → waitlist 计数器卡在 4
 
 [0:12–0:22] 演示 — 粘贴 URL
-旁白："Postwave 只改一件事。你贴上产品 URL —"
-画面：光标把 "yourproduct.com" 粘进 Postwave
+旁白："OPC.Dino 只改一件事。你贴上产品 URL —"
+画面：光标把 "yourproduct.com" 粘进 OPC.Dino
 
 [0:22–0:35] 演示 — 多平台输出
 旁白："— AI 帮你拆出每个平台的原生内容。
@@ -91,7 +91,7 @@ Reddit 长帖、X thread、Dev.to 博客、Indie Hackers pitch。
 
 [0:55–1:00] CTA
 旁白："Phase 0 waitlist 开放。前 100 名首年五折永久锁定。"
-画面：postwave.so + "加入 Waitlist" 按钮高亮
+画面：opcdino.so + "加入 Waitlist" 按钮高亮
 ```
 
 ---
@@ -99,7 +99,7 @@ Reddit 长帖、X thread、Dev.to 博客、Indie Hackers pitch。
 ## Detailed description (PH "Coming Soon" page body, ~350 words)
 
 ```
-Postwave is a multi-platform launcher for indie hackers and one-person companies (OPC) shipping products to both global and China audiences.
+OPC.Dino is a multi-platform launcher for indie hackers and one-person companies (OPC) shipping products to both global and China audiences.
 
 The problem
 
@@ -107,9 +107,9 @@ Indie shipping is now lopsided: writing code is fast, distribution is slow. Exis
 
 The solution
 
-Paste your product URL. Postwave's AI reads it and generates native-format content for each platform — Reddit longform, X thread, Dev.to article, IH pitch, Jike short hook, V2EX tech post — each tuned to that platform's reader, not auto-translated.
+Paste your product URL. OPC.Dino's AI reads it and generates native-format content for each platform — Reddit longform, X thread, Dev.to article, IH pitch, Jike short hook, V2EX tech post — each tuned to that platform's reader, not auto-translated.
 
-For platforms with open APIs (Reddit, X, Threads, Mastodon, Dev.to, Bluesky), Postwave publishes directly via OAuth — using your account, your tokens. For platforms without write APIs (Product Hunt, Hacker News, Indie Hackers, LinkedIn), we generate the draft and one-click jump you to the publish page. For China platforms (Jike, V2EX), we use a Playwright + Electron container running on Aliyun ECS to publish on your behalf, with rate limits and per-user cookie isolation.
+For platforms with open APIs (Reddit, X, Threads, Mastodon, Dev.to, Bluesky), OPC.Dino publishes directly via OAuth — using your account, your tokens. For platforms without write APIs (Product Hunt, Hacker News, Indie Hackers, LinkedIn), we generate the draft and one-click jump you to the publish page. For China platforms (Jike, V2EX), we use a Playwright + Electron container running on Aliyun ECS to publish on your behalf, with rate limits and per-user cookie isolation.
 
 After publishing, we pull engagement data at 24h, 72h, and 168h — showing exactly which platform converted for your product.
 
@@ -138,7 +138,7 @@ Built by one indie hacker (me), in public. Every Phase 0 metric is published. Ev
 
 ### Screenshot 1 — Hero
 
-**What to show**: Postwave landing page hero. URL input field with placeholder `https://your-product.com`. Below it: cascading platform cards (Reddit, X, Dev.to, Jike, V2EX, IH).
+**What to show**: OPC.Dino landing page hero. URL input field with placeholder `https://your-product.com`. Below it: cascading platform cards (Reddit, X, Dev.to, Jike, V2EX, IH).
 
 **Caption**: "One URL in. Ten+ platform-native posts out. Both global and China — finally one tool."
 
@@ -164,7 +164,7 @@ Built by one indie hacker (me), in public. Every Phase 0 metric is published. Ev
 
 **What to show**: settings screen with provider rows (X, Reddit, Threads, Mastodon, Dev.to). Each shows OAuth status badge ("Connected" / "Connect"). One row expanded with a 3-step inline guide.
 
-**Caption**: "Your accounts, your keys, your control. Postwave never holds your passwords."
+**Caption**: "Your accounts, your keys, your control. OPC.Dino never holds your passwords."
 
 ---
 

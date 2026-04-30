@@ -1,4 +1,4 @@
-# Indie Hackers — Postwave
+# Indie Hackers — OPC.Dino
 
 > Format: long-form post in IH "Starting Up" or "Building in Public" category
 > Length: ~1000 words
@@ -14,7 +14,7 @@ After 8 dead side projects, I figured out what was actually killing them — and
 ```
 
 Alternative titles (if title-test):
-- `Why I'm building Postwave: a launcher for indie hackers shipping to both Western and Chinese platforms`
+- `Why I'm building OPC.Dino: a launcher for indie hackers shipping to both Western and Chinese platforms`
 - `The $300/mo two-tool tax on indie hackers shipping globally — and what I'm building instead`
 
 ---
@@ -62,7 +62,7 @@ Total: ~$60/mo, 3 logins, 2 writing styles, 0 unified analytics.
 
 Nobody is doing both sides seriously. That's the gap I'm betting on.
 
-What I'm Building: Postwave
+What I'm Building: OPC.Dino
 
 One core action: paste a product URL → AI generates 10+ platform-native posts → publish via API or one-click jump.
 

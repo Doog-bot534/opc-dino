@@ -8,20 +8,20 @@
 
 ---
 
-## 候选 1 — Postwave（中文：浪播 / 推浪）
+## 候选 1 — OPC.Dino（中文：OPC.Dino / 推浪）
 
 **含义**
 - "Post"（发帖）+ "Wave"（潮、波）= 一篇内容像一道浪，被推到所有平台。
 - 也呼应"浪潮 / build in public 浪潮"。
 
 **与产品定位的关系**
-正中红心：一个产品 = 一道波，向多个平台同时扩散。比"scheduler"（排程）更有动作感，比"launcher"（启动器）更轻松。中文译名"浪播"自带社交气质，能在即刻 / V2EX 这类中文圈直接用。
+正中红心：一个产品 = 一道波，向多个平台同时扩散。比"scheduler"（排程）更有动作感，比"launcher"（启动器）更轻松。中文译名"OPC.Dino"自带社交气质，能在即刻 / V2EX 这类中文圈直接用。
 
 **域名可用性（实测）**
-- `postwave.com` — TAKEN
-- `postwave.so` — **可用** ✅
-- `postwave.ai` — TAKEN
-- `postwave.dev` — TAKEN
+- `opcdino.com` — TAKEN
+- `opcdino.so` — **可用** ✅
+- `opcdino.ai` — TAKEN
+- `opcdino.dev` — TAKEN
 
 **优势**
 1. 名词 + 动作意象兼具，落到 logo 容易（一道波 / 一个发射符号）
@@ -132,21 +132,21 @@
 
 ## 推荐
 
-**首选：Postwave（浪播）+ `postwave.so`**
+**首选：OPC.Dino+ `opcdino.so`**
 
 **理由（三条）**：
 
-1. **意象 × 动作 × 中英通吃** — "Post"（发）+ "Wave"（浪）一秒讲清产品做什么；中文译名"浪播"在即刻 / V2EX 自然，海外读法也舒服。其他候选要么锁死 ICP（OPClaunch / ShipIndie 撞墙），要么 SEO 受污染（Lighthous），要么过于通用（AllChannels）。
+1. **意象 × 动作 × 中英通吃** — "Post"（发）+ "Wave"（浪）一秒讲清产品做什么；中文译名"OPC.Dino"在即刻 / V2EX 自然，海外读法也舒服。其他候选要么锁死 ICP（OPClaunch / ShipIndie 撞墙），要么 SEO 受污染（Lighthous），要么过于通用（AllChannels）。
 
-2. **域名拿得到一个干净的 `.so`** — `.com` 已普遍是 reseller 高价标的，`postwave.so` 在 sonic 注册局 `No Object Found`，年费 $30-40 即可拿下。对 indie SaaS 这就是实际能买的最好结果。`.so` 还自带 "Software" 双关。
+2. **域名拿得到一个干净的 `.so`** — `.com` 已普遍是 reseller 高价标的，`opcdino.so` 在 sonic 注册局 `No Object Found`，年费 $30-40 即可拿下。对 indie SaaS 这就是实际能买的最好结果。`.so` 还自带 "Software" 双关。
 
-3. **不锁死 ICP，但又有方向** — 不像 OPClaunch / ShipIndie 把"一人公司""indie"焊死在品牌里，Postwave 既能讲 indie 故事，将来扩到 5 人小团队 / agency 也不别扭。Phase 2 需求池接入时也能解释成"先看到浪从哪来，再决定推哪道浪"。
+3. **不锁死 ICP，但又有方向** — 不像 OPClaunch / ShipIndie 把"一人公司""indie"焊死在品牌里，OPC.Dino 既能讲 indie 故事，将来扩到 5 人小团队 / agency 也不别扭。Phase 2 需求池接入时也能解释成"先看到浪从哪来，再决定推哪道浪"。
 
 **推荐域名组合**：
-- 主域名：`postwave.so`（产品官网）
-- 备选可一起注册：`postwave.io`（如可用，做技术文档）/ `postwave.app`（做应用入口）
+- 主域名：`opcdino.so`（产品官网）
+- 备选可一起注册：`opcdino.io`（如可用，做技术文档）/ `opcdino.app`（做应用入口）
 
-**次选**（如果觉得 Postwave 太"营销味"）：**OPClaunch + `opclaunch.ai`**
+**次选**（如果觉得 OPC.Dino 太"营销味"）：**OPClaunch + `opclaunch.ai`**
 - 优势：和用户已有研究沉淀（"OPC 操作系统"）天然连续；`.ai` 还能拿到
 - 代价：永远要给用户解释什么是 OPC
 
@@ -155,7 +155,7 @@
 ## 不推荐的原候选说明
 
 - **Buoy / Voyage** — 域名层面已经基本拿不到（buoy.com / voyage.com 都是老域名，buoy.so 在 2026-04 刚被抢注，buoy.ai 也被占）。即使能拿到非主流后缀，"浮标 / 航行"这种隐喻太隐晦，需要文案大量解释，不适合 indie 速度。
-- **BuildIO** — `buildio.com` 早被占；"io" 后缀疲劳；含义比 Postwave 更弱（build 太泛）。
+- **BuildIO** — `buildio.com` 早被占；"io" 后缀疲劳；含义比 OPC.Dino 更弱（build 太泛）。
 - **Indie Launch OS** — 三个词太长不好做 logo，SEO 也撒胡椒面。
 
 ---

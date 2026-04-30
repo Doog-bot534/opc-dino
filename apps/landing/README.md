@@ -1,7 +1,7 @@
-# Postwave Landing
+# OPC.Dino Landing
 
 > Phase 0 — landing + waitlist
-> 域名：[postwave.so](https://postwave.so)
+> 域名：[opcdino.so](https://opcdino.so)
 > 文案来源：`/Volumes/硬盘/项目/opc-launchos/docs/launch-copy/landing-copy.md`
 
 ## 本地开发
@@ -49,7 +49,7 @@ src/
 
 ## 环境变量
 
-- `NEXT_PUBLIC_SITE_URL` — 站点 URL，默认 `https://postwave.so`
+- `NEXT_PUBLIC_SITE_URL` — 站点 URL，默认 `https://opcdino.so`
 - `RESEND_API_KEY` — Resend 后端 key
 - `RESEND_AUDIENCE_ID` — waitlist 对应的 Resend audience
 

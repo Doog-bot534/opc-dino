@@ -1,6 +1,6 @@
-# Postwave / postwave.so
+# OPC.Dino / opcdino.so
 
-> 品牌名：**Postwave（浪播）** · 域名：[postwave.so](https://postwave.so)
+> 品牌名：**OPC.Dino** · 域名：[opcdino.so](https://opcdino.so)
 > 当前阶段：Phase 0（landing + waitlist）
 > 启动日期：2026-04-30
 > 命名调研：`docs/launch-copy/brand-naming.md`

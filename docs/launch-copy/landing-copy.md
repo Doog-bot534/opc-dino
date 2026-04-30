@@ -1,6 +1,6 @@
-# Postwave 浪播 — Landing Page 中文文案
+# OPC.Dino OPC.Dino — Landing Page 中文文案
 
-> 品牌名：**Postwave（浪播）**（注：候选名，待最终确认）
+> 品牌名：**OPC.Dino**（注：候选名，待最终确认）
 > 状态：Phase 0 — 仅 landing + waitlist
 > 文案口吻：诚实、不浮夸、indie hacker 第一人称
 > 移动端：所有标题 ≤ 14 字，副标题 ≤ 30 字，所有卡片描述 ≤ 40 字（保证手机两行内放得下）
@@ -63,7 +63,7 @@
 **描述**：
 > 你只做一件事：贴上产品 URL。
 >
-> Postwave 用 AI 读完你的产品，自动拆出 10+ 个平台各自的原生格式内容 — 中文长帖、英文 thread、技术博客、独立开发者社区 pitch — 每一份都按那个平台用户会读的方式写。
+> OPC.Dino 用 AI 读完你的产品，自动拆出 10+ 个平台各自的原生格式内容 — 中文长帖、英文 thread、技术博客、独立开发者社区 pitch — 每一份都按那个平台用户会读的方式写。
 >
 > 海外的 6 个平台用 OAuth 直接 API 发布；中国的即刻、V2EX 用我们的 Electron 容器代理发；Product Hunt / Hacker News / Indie Hackers 这些没开放写入 API 的，生成稿 + 一键打开发布页。
 >
@@ -150,7 +150,7 @@
 
 **Q1：什么是 BYO API key？为什么要这么做？**
 
-> Bring-Your-Own API key — 你自己去 X 开发者后台、Reddit OAuth 后台拿到 key/token，填给 Postwave，我们帮你调。
+> Bring-Your-Own API key — 你自己去 X 开发者后台、Reddit OAuth 后台拿到 key/token，填给 OPC.Dino，我们帮你调。
 >
 > 为什么不替你代办？两个原因：
 > 1. 平台越来越严，第三方代发是封号高发区。你自己的账号、自己的 token，最安全。
@@ -173,7 +173,7 @@
 
 > 还不能。
 >
-> Postwave 在 Phase 0 — landing + waitlist 阶段，预计 2026 年 Q3 内测开放。这个 landing 本身也是用 Postwave 的方式（手动 + AI 辅助）推到 7 个平台的，你正在看的就是 dogfood 第 0 个版本。
+> OPC.Dino 在 Phase 0 — landing + waitlist 阶段，预计 2026 年 Q3 内测开放。这个 landing 本身也是用 OPC.Dino 的方式（手动 + AI 辅助）推到 7 个平台的，你正在看的就是 dogfood 第 0 个版本。
 >
 > 你加入 waitlist 后，我会用邮件公开 build 进度（每 2 周一封，含数据），内测开放时早鸟先进。
 
@@ -205,7 +205,7 @@
 
 ## Footer CTA
 
-**标题**：先把产品做完，再来想推广 — Postwave 等你。
+**标题**：先把产品做完，再来想推广 — OPC.Dino 等你。
 
 **副标题**：早鸟 waitlist 仅前 100 名享首年 5 折永久锁定。
 
@@ -215,7 +215,7 @@
 
 **底部小字**：
 > 由一个独立开发者在做。每两周一封 build 进度邮件，可随时退订。
-> Phase 0 阶段，所有内容用 Postwave 自身（人工 + AI）推送 — 你看到的就是产品在跑自己。
+> Phase 0 阶段，所有内容用 OPC.Dino 自身（人工 + AI）推送 — 你看到的就是产品在跑自己。
 
 ---
 
@@ -223,7 +223,7 @@
 
 **title**（≤60 字符）
 
-> Postwave — 一个 URL，发到 10+ 平台 | 独立开发者 launch 工具
+> OPC.Dino — 一个 URL，发到 10+ 平台 | 独立开发者 launch 工具
 
 （约 35 中英混合字符，全角约 60 字符内）
 

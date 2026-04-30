@@ -1,4 +1,4 @@
-# Reddit r/SideProject — Postwave
+# Reddit r/SideProject — OPC.Dino
 
 > Subreddit: r/SideProject (also viable: r/indiehackers, r/Entrepreneur, r/startups)
 > Tone: honest, technical, anti-marketing. Reddit punishes hype hard.
@@ -20,7 +20,7 @@
 ## Main post
 
 ```
-TL;DR: Building Postwave — paste your product URL, AI generates 10+ platform-native posts (Reddit / X / Threads / Dev.to + China's Jike / V2EX), one-click publish or one-click jump. BYO API key. $19/mo. Phase 0 waitlist now: {{LANDING_URL}}
+TL;DR: Building OPC.Dino — paste your product URL, AI generates 10+ platform-native posts (Reddit / X / Threads / Dev.to + China's Jike / V2EX), one-click publish or one-click jump. BYO API key. $19/mo. Phase 0 waitlist now: {{LANDING_URL}}
 
 ---
 
@@ -42,7 +42,7 @@ For an indie shipping to both global + China audiences, the current stack is: Bu
 
 Nobody is doing both sides seriously. That's the gap.
 
-What Postwave does
+What OPC.Dino does
 
 Input: your product URL.
 Output: native-format content for each platform — Reddit longform, X thread, Threads carousel, Dev.to article, IH pitch, Jike short hook, V2EX tech post.
@@ -72,7 +72,7 @@ Three deliberate constraints
 
 Current status
 
-Phase 0 — landing + waitlist. This Reddit post itself is a dogfood test (written 50% with Postwave's AI prompt-template draft, 50% manual). I'm publishing every Phase 0 metric publicly: which platforms convert, what the CTR was, where I got rate-limited.
+Phase 0 — landing + waitlist. This Reddit post itself is a dogfood test (written 50% with OPC.Dino's AI prompt-template draft, 50% manual). I'm publishing every Phase 0 metric publicly: which platforms convert, what the CTR was, where I got rate-limited.
 
 Phase 1 (MVP, 4-6 weeks): direct-API on 6 western platforms + China rail on Jike/V2EX.
 Phase 2 (3-6 months): demand-pool integration — scrape r/SaaS, r/SideProject, Jike, V2EX to surface real indie pain points in real time.
@@ -100,7 +100,7 @@ Waitlist: {{LANDING_URL}}
 ```
 Few things I left out of the post to keep it short:
 
-1. Why "Postwave" — Post (verb) + Wave (one product = one wave reaching multiple shores). Domain is postwave.so because every reasonable .com is taken in 2026 and I'm okay with that.
+1. Why "OPC.Dino" — Post (verb) + Wave (one product = one wave reaching multiple shores). Domain is opcdino.so because every reasonable .com is taken in 2026 and I'm okay with that.
 
 2. Self-hosting — I'll open-source the platform-adapter layer once Phase 1 ships (following Postiz's model). The AI prompt templates will stay closed.
 

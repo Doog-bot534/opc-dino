@@ -1,4 +1,4 @@
-# 即刻发布文案 — Postwave
+# 即刻发布文案 — OPC.Dino
 
 > 平台：即刻 (https://web.okjike.com)
 > 圈子建议：独立开发 / 出海 / 一人公司
@@ -14,14 +14,14 @@
 
 最离谱的一次：花 3 个月写代码，发布只用了 1 天，然后没人来。
 
-这两周在做一个新东西，叫 Postwave。
+这两周在做一个新东西，叫 OPC.Dino。
 
 输入产品 URL，AI 拆出 10+ 个平台的原生格式 — Reddit 长帖、X thread、即刻短钩、V2EX 技术贴 — 一键发完。海外 6 个 API 直发，即刻 / V2EX 用容器代理，PH/HN/IH 这种生成稿一键跳转。
 
 为什么做？
 1. Buffer 不发即刻，蚁小二不发 Reddit，出海的我每月订两套
 2. 价格 $19 起，BYO API key（你自己的账号，我不替你买流量）
-3. dogfood — 这条即刻就是用 Postwave 自己发的
+3. dogfood — 这条即刻就是用 OPC.Dino 自己发的
 
 现在 Phase 0：landing + waitlist。前 100 名首年 5 折锁定。
 
@@ -45,9 +45,9 @@ build log 每两周一封，会公开数据。欢迎来锤。
 ## 发布建议
 
 - **时段**：晚上 21:00-22:30（即刻独立开发圈子最活跃时段）
-- **配图建议**：Postwave 的 logo + 一张 hero 截图（如果还没有，可贴 hero 文字渲染图）
+- **配图建议**：OPC.Dino 的 logo + 一张 hero 截图（如果还没有，可贴 hero 文字渲染图）
 - **首条评论**（自己置顶）："如果你也在出海 + 中国双轨发，回我一条你现在的工具组合，我把对比做成图发出来。"（钓评论用）
-- **第二天 follow up**：发一条数据帖 — "昨天那条 Postwave 24h 数据：waitlist +X / 阅读 +Y / 评论 Z 条"，build in public 闭环。
+- **第二天 follow up**：发一条数据帖 — "昨天那条 OPC.Dino 24h 数据：waitlist +X / 阅读 +Y / 评论 Z 条"，build in public 闭环。
 
 ---
 

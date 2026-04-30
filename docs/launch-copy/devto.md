@@ -1,4 +1,4 @@
-# Dev.to — Postwave technical post
+# Dev.to — OPC.Dino technical post
 
 > Format: long-form technical blog
 > Length: ~1500 words
@@ -22,19 +22,19 @@
 ```
 Yes, the world has Buffer, Hootsuite, Postiz, Typefully, Hypefury, and a graveyard of YC pitch decks for "the all-in-one social tool". I am, knowingly, building another one.
 
-Bear with me — three architectural bets make Postwave structurally different from anything in the current top-of-funnel tools, and I want to walk through them because indie devs reading this are exactly the people who'll have opinions worth listening to.
+Bear with me — three architectural bets make OPC.Dino structurally different from anything in the current top-of-funnel tools, and I want to walk through them because indie devs reading this are exactly the people who'll have opinions worth listening to.
 
 The Problem (in one paragraph)
 
 I've shipped 8 side projects in 3 years. Every single one died at distribution — not at idea or code or even product-market fit. At distribution. The available tools are either Western-only (Buffer, Postiz, Typefully) or Chinese-only (Antxiao'er, Yimei). For an indie shipping to both audiences (and there are more of us than the tooling market reflects), the current stack is two paid tools, two writing voices, two analytics dashboards, and a lot of manual copy-paste. Nobody covers both rails seriously. That's the gap.
 
-Postwave: paste a product URL → AI generates platform-native content for 10+ platforms (Reddit, X, Threads, Mastodon, Dev.to, Bluesky, Product Hunt, HN, IH, LinkedIn, Jike, V2EX) → publish via API or one-click jump → analytics at 24h/72h/168h.
+OPC.Dino: paste a product URL → AI generates platform-native content for 10+ platforms (Reddit, X, Threads, Mastodon, Dev.to, Bluesky, Product Hunt, HN, IH, LinkedIn, Jike, V2EX) → publish via API or one-click jump → analytics at 24h/72h/168h.
 
 Now the bets.
 
 Bet 1: BYO API key, on principle
 
-Most launch tools want to own the connection layer — they negotiate platform partnerships, manage tokens, and abstract the "how do I post?" away from users. Postwave does the opposite: the user brings their own X / Reddit / Threads / Mastodon API tokens, runs through their own OAuth flow, and Postwave just orchestrates.
+Most launch tools want to own the connection layer — they negotiate platform partnerships, manage tokens, and abstract the "how do I post?" away from users. OPC.Dino does the opposite: the user brings their own X / Reddit / Threads / Mastodon API tokens, runs through their own OAuth flow, and OPC.Dino just orchestrates.
 
 This sounds like a worse user experience. Why?
 
@@ -85,13 +85,13 @@ Western web is API-rich. Chinese consumer platforms are the opposite — Jike ha
 
 For an indie shipping to a Chinese audience, you can't ignore these platforms. But you also can't naively scrape them.
 
-Postwave's compromise: a tiered automation strategy.
+OPC.Dino's compromise: a tiered automation strategy.
 
 Tier A — Direct API (low risk, full automation): Reddit, X, Threads, Mastodon, Dev.to, Bluesky.
 
-Tier B — Semi-auto (no automation, but draft generation): Product Hunt, HN, IH, LinkedIn. Postwave generates the platform-native draft + opens the publish page in your browser. You hit "submit". Friction tax: ~10 seconds per platform. Worth it.
+Tier B — Semi-auto (no automation, but draft generation): Product Hunt, HN, IH, LinkedIn. OPC.Dino generates the platform-native draft + opens the publish page in your browser. You hit "submit". Friction tax: ~10 seconds per platform. Worth it.
 
-Tier C — Container proxy (medium risk, automated): Jike, V2EX. Postwave runs a Playwright + Electron + Chromium worker on Aliyun ECS, logs in with your cookies (encrypted at rest, AES-256), and publishes via simulated browser interaction. Rate-limited to 3 posts/platform/day. User cookies are isolated per-account; we never share infrastructure between users.
+Tier C — Container proxy (medium risk, automated): Jike, V2EX. OPC.Dino runs a Playwright + Electron + Chromium worker on Aliyun ECS, logs in with your cookies (encrypted at rest, AES-256), and publishes via simulated browser interaction. Rate-limited to 3 posts/platform/day. User cookies are isolated per-account; we never share infrastructure between users.
 
 Tier D — Generate-only (don't try to automate): Xiaohongshu, Zhihu, Bilibili, Weibo. AI generates the draft, you copy-paste manually. We tell users this upfront and don't pretend otherwise. Honesty > feature parity.
 
@@ -196,7 +196,7 @@ Tags: #sideproject #indie #ai #saas
 
 - **Best time on Dev.to**: Tuesday/Wednesday 9am EST. Avoid Mondays (low engagement) and Fridays (everyone reads on weekend, but the velocity boost happens early).
 - **Cover image**: a clean architecture diagram (boxes for Next.js / BullMQ / Aliyun ECS / Anthropic / Postgres). Mermaid → PNG works.
-- **Series**: tag this post as part of a "Building Postwave in Public" series. Dev.to series get more inbound subscribers than one-off posts.
+- **Series**: tag this post as part of a "Building OPC.Dino in Public" series. Dev.to series get more inbound subscribers than one-off posts.
 - **Cross-post canonical**: if you have a personal blog, set canonical URL there and Dev.to as the syndication. Otherwise Dev.to first.
 - **Ladder**: 24h after this post, follow up with "Update: Phase 0 first 7 days — what worked, what didn't" and link back. Dev.to readers reward continued narrative.
 

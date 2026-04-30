@@ -1,13 +1,13 @@
 /**
- * Postwave 中文文案
+ * OPC.Dino 中文文案
  * ---------------------------------
  * 来源：docs/launch-copy/landing-copy.md（不要改文案，只对结构做适配）
  */
 
 export const dict = {
   meta: {
-    siteName: "Postwave",
-    siteNameZh: "浪播",
+    siteName: "OPC.Dino",
+    siteNameZh: "OPC.Dino",
     waitlistCount: 0, // 占位计数，未来从 Resend Audience API 拉取
   },
 
@@ -57,7 +57,7 @@ export const dict = {
       {
         title: "贴上产品 URL",
         description:
-          "Postwave 用 AI 读完你的产品页面，自动提炼卖点、用户画像和差异化。",
+          "OPC.Dino 用 AI 读完你的产品页面，自动提炼卖点、用户画像和差异化。",
       },
       {
         title: "AI 拆出 10+ 平台原生稿",
@@ -144,7 +144,7 @@ export const dict = {
     items: [
       {
         q: "什么是 BYO API key？为什么要这么做？",
-        a: "Bring-Your-Own API key — 你自己去 X 开发者后台、Reddit OAuth 后台拿到 key/token，填给 Postwave，我们帮你调。两个原因：(1) 平台越来越严，第三方代发是封号高发区，自己的账号最安全。(2) X 的 API 已经收费（$0.01/post 起），我们如果替你买，要么涨订阅费要么限制频率，都不如你自己控成本。整个 OAuth 流程我们做了 step-by-step 引导，不懂技术也能 5 分钟配完。",
+        a: "Bring-Your-Own API key — 你自己去 X 开发者后台、Reddit OAuth 后台拿到 key/token，填给 OPC.Dino，我们帮你调。两个原因：(1) 平台越来越严，第三方代发是封号高发区，自己的账号最安全。(2) X 的 API 已经收费（$0.01/post 起），我们如果替你买，要么涨订阅费要么限制频率，都不如你自己控成本。整个 OAuth 流程我们做了 step-by-step 引导，不懂技术也能 5 分钟配完。",
       },
       {
         q: "我的账号会被封吗？",
@@ -152,7 +152,7 @@ export const dict = {
       },
       {
         q: "现在能用吗？",
-        a: "还不能。Postwave 在 Phase 0 — landing + waitlist 阶段，预计 2026 年 Q3 内测开放。这个 landing 本身也是用 Postwave 的方式（手动 + AI 辅助）推到 7 个平台的，你正在看的就是 dogfood 第 0 个版本。加入 waitlist 后，我会用邮件公开 build 进度（每 2 周一封，含数据），内测开放时早鸟先进。",
+        a: "还不能。OPC.Dino 在 Phase 0 — landing + waitlist 阶段，预计 2026 年 Q3 内测开放。这个 landing 本身也是用 OPC.Dino 的方式（手动 + AI 辅助）推到 7 个平台的，你正在看的就是 dogfood 第 0 个版本。加入 waitlist 后，我会用邮件公开 build 进度（每 2 周一封，含数据），内测开放时早鸟先进。",
       },
       {
         q: "海外和中国发布有什么差异？",
@@ -170,10 +170,10 @@ export const dict = {
   },
 
   ctaFooter: {
-    title: "先把产品做完，再来想推广 — Postwave 等你。",
+    title: "先把产品做完，再来想推广 — OPC.Dino 等你。",
     subtitle: "早鸟 waitlist 仅前 100 名享首年 5 折永久锁定。",
     smallNote:
-      "由一个独立开发者在做。每两周一封 build 进度邮件，可随时退订。Phase 0 阶段，所有内容用 Postwave 自身（人工 + AI）推送 — 你看到的就是产品在跑自己。",
+      "由一个独立开发者在做。每两周一封 build 进度邮件，可随时退订。Phase 0 阶段，所有内容用 OPC.Dino 自身（人工 + AI）推送 — 你看到的就是产品在跑自己。",
   },
 
   waitlistForm: {
@@ -191,7 +191,7 @@ export const dict = {
 
   footer: {
     tagline: "由一个独立开发者维护 · build in public",
-    copyright: "© 2026 Postwave. All rights reserved.",
+    copyright: "© 2026 OPC.Dino. All rights reserved.",
     twitter: "Twitter",
     github: "GitHub",
     email: "联系我们",

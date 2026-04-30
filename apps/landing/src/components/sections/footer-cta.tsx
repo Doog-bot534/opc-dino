@@ -57,7 +57,7 @@ export function FooterCTA() {
           </div>
           <div className="flex items-center gap-4">
             <Link
-              href="https://twitter.com/postwave_so"
+              href="https://twitter.com/opcdino_so"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 transition-colors hover:text-foreground"
@@ -66,7 +66,7 @@ export function FooterCTA() {
               {f.twitter}
             </Link>
             <Link
-              href="https://github.com/postwave"
+              href="https://github.com/opcdino"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 transition-colors hover:text-foreground"
@@ -75,7 +75,7 @@ export function FooterCTA() {
               {f.github}
             </Link>
             <Link
-              href="mailto:hi@postwave.so"
+              href="mailto:hi@opcdino.so"
               className="inline-flex items-center gap-1.5 transition-colors hover:text-foreground"
             >
               <Mail className="h-3.5 w-3.5" />

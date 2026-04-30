@@ -13,13 +13,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://postwave.so";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://opcdino.so";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Postwave — 一个 URL，发到 10+ 平台 | 独立开发者 launch 工具",
-    template: "%s | Postwave",
+    default: "OPC.Dino — 一个 URL，发到 10+ 平台 | 独立开发者 launch 工具",
+    template: "%s | OPC.Dino",
   },
   description:
     "AI 把你的产品拆成 10+ 平台原生内容，海外 Reddit/X/Threads + 中国即刻/V2EX 一套发完。BYO API key，$19 起。出海中国独立开发者专属。",
@@ -27,13 +27,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "zh_CN",
     url: siteUrl,
-    title: "Postwave — 一个 URL，发完所有平台",
+    title: "OPC.Dino — 一个 URL，发完所有平台",
     description:
       "AI 把你的产品拆成 10+ 平台原生内容包 — 海外、中国，一套搞定。",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Postwave — 一个 URL，发完所有平台",
+    title: "OPC.Dino — 一个 URL，发完所有平台",
     description:
       "AI 把你的产品拆成 10+ 平台原生内容包 — 海外、中国，一套搞定。",
   },
