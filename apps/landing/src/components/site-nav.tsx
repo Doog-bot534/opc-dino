@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { Rocket } from "lucide-react";
 import { useLocale } from "@/lib/locale-provider";
 
 export function SiteNav() {
@@ -13,9 +12,14 @@ export function SiteNav() {
           href="/"
           className="flex items-center gap-2 font-semibold tracking-tight text-[var(--ink)]"
         >
-          <span className="grid h-8 w-8 place-items-center rounded-full bg-[var(--brand)] text-white">
-            <Rocket className="h-4 w-4" />
-          </span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/icon.svg"
+            alt={t.meta.siteName}
+            width={28}
+            height={28}
+            className="h-7 w-7"
+          />
           <span className="text-base">{t.meta.siteName}</span>
         </Link>
         <nav className="flex items-center gap-1 sm:gap-3">
