@@ -1,5 +1,8 @@
+"use client";
+
 import { ChapterHead } from "@/components/chapter-head";
-import { t } from "@/i18n";
+import { Parts } from "@/components/parts";
+import { useLocale } from "@/lib/locale-provider";
 
 const KEYS = [
   { k: "/ 01 · ingest", en: "Drop the URL." },
@@ -8,7 +11,9 @@ const KEYS = [
 ];
 
 export function Solution() {
+  const { t, locale } = useLocale();
   const dict = t.solution;
+  const term = dict.terminalLines;
 
   return (
     <section
@@ -16,17 +21,10 @@ export function Solution() {
       className="border-t border-[var(--line-2)] bg-[var(--bg)] py-24 sm:py-28"
     >
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <ChapterHead
-          n="/ 02"
-          t="WORKFLOW"
-          cn="工作流"
-          aside="§ / URL → 10+ 平台"
-        />
+        <ChapterHead {...dict.chapter} />
 
         <p className="reveal mx-auto mb-12 max-w-3xl text-balance text-lg leading-relaxed text-[var(--ink-2)] sm:text-xl">
-          一个 URL，<span className="fade">翻译成</span>
-          <span className="mark"> 每个社区都听得懂的话</span>
-          <span className="fade">。</span>
+          <Parts parts={dict.titleParts} />
           <span className="block mt-2 text-sm text-[var(--muted)]">
             {dict.subtitle}
           </span>
@@ -40,7 +38,9 @@ export function Solution() {
                 <span className="k">{meta.k}</span>
                 <h3>
                   <span>{step.title}</span>
-                  {meta.en ? <span className="en">{meta.en}</span> : null}
+                  {locale === "zh" && meta.en ? (
+                    <span className="en">{meta.en}</span>
+                  ) : null}
                 </h3>
                 <p>{step.description}</p>
               </div>
@@ -55,28 +55,20 @@ export function Solution() {
             <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
             <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
             <span className="ml-3 font-[family-name:var(--font-geist-mono)] text-xs text-[var(--muted)]">
-              opc launch
+              {dict.terminalCaption}
             </span>
           </div>
           <pre className="overflow-x-auto p-5 text-xs leading-relaxed sm:p-6 sm:text-sm">
             <code className="font-[family-name:var(--font-geist-mono)] text-[var(--muted)]">
-              <span className="text-[var(--brand)]">$</span> opc launch
-              https://your-product.com{"\n"}
-              <span className="text-[var(--muted-2)]">
-                {"  → 抓取产品信息..."}
-              </span>
+              <span className="text-[var(--brand)]">$</span> {term.cmd}
               {"\n"}
-              <span className="text-[var(--muted-2)]">
-                {"  → AI 生成 7 平台原生格式内容..."}
-              </span>
+              <span className="text-[var(--muted-2)]">{term.step1}</span>
               {"\n"}
-              <span className="text-[var(--ink)]">
-                {"  ✓ Reddit · X · Threads · Dev.to · 即刻 · V2EX · PH"}
-              </span>
+              <span className="text-[var(--muted-2)]">{term.step2}</span>
               {"\n"}
-              <span className="text-[var(--muted-2)]">
-                {"  → 一键发布或跳转目标平台"}
-              </span>
+              <span className="text-[var(--ink)]">{term.step3}</span>
+              {"\n"}
+              <span className="text-[var(--muted-2)]">{term.step4}</span>
             </code>
           </pre>
         </div>

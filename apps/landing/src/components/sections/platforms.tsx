@@ -1,5 +1,8 @@
+"use client";
+
 import { ChapterHead } from "@/components/chapter-head";
-import { t } from "@/i18n";
+import { Parts } from "@/components/parts";
+import { useLocale } from "@/lib/locale-provider";
 import { platforms } from "@/lib/platforms";
 import { cn } from "@/lib/utils";
 
@@ -44,13 +47,14 @@ function PlatformCard({
   slug,
   name,
   icon,
+  statusLabel,
 }: {
   slug: string;
   name: string;
   icon: string | null;
+  statusLabel: string;
 }) {
   const status = STATUS[slug] ?? "draft";
-  const statusLabel = t.platforms.statusLabels[status];
 
   return (
     <div className="group relative flex flex-col items-center justify-between gap-3 rounded-2xl border border-[var(--line)] bg-[var(--bg-1)] p-5 transition-all hover:border-[var(--brand)]/40 hover:bg-white">
@@ -89,6 +93,7 @@ function PlatformCard({
 }
 
 export function Platforms() {
+  const { t } = useLocale();
   const dict = t.platforms;
   const overseas = platforms.filter((p) => p.region === "overseas");
   const china = platforms.filter((p) => p.region === "china");
@@ -99,17 +104,10 @@ export function Platforms() {
       className="border-t border-[var(--line-2)] bg-[var(--bg)] py-24 sm:py-28"
     >
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <ChapterHead
-          n="/ 03"
-          t="REACH"
-          cn="覆盖"
-          aside="§ / 海外 + 中国"
-        />
+        <ChapterHead {...dict.chapter} />
 
         <p className="reveal mx-auto mb-12 max-w-3xl text-balance text-lg leading-relaxed text-[var(--ink-2)] sm:text-xl">
-          海外 + 中国，
-          <span className="mark"> 一起覆盖</span>
-          <span className="fade">。</span>
+          <Parts parts={dict.titleParts} />
           <span className="block mt-2 text-sm text-[var(--muted)]">
             {dict.subtitle}
           </span>
@@ -122,13 +120,20 @@ export function Platforms() {
               {dict.overseasLabel}
             </h3>
             <span className="text-xs text-[var(--muted-2)]">
-              · {overseas.length} 个
+              · {overseas.length} {dict.countSuffix}
             </span>
           </div>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-5">
-            {overseas.map((p) => (
-              <PlatformCard key={p.slug} {...p} />
-            ))}
+            {overseas.map((p) => {
+              const status = STATUS[p.slug] ?? "draft";
+              return (
+                <PlatformCard
+                  key={p.slug}
+                  {...p}
+                  statusLabel={dict.statusLabels[status]}
+                />
+              );
+            })}
           </div>
         </div>
 
@@ -139,13 +144,20 @@ export function Platforms() {
               {dict.chinaLabel}
             </h3>
             <span className="text-xs text-[var(--muted-2)]">
-              · {china.length} 个
+              · {china.length} {dict.countSuffix}
             </span>
           </div>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-6">
-            {china.map((p) => (
-              <PlatformCard key={p.slug} {...p} />
-            ))}
+            {china.map((p) => {
+              const status = STATUS[p.slug] ?? "draft";
+              return (
+                <PlatformCard
+                  key={p.slug}
+                  {...p}
+                  statusLabel={dict.statusLabels[status]}
+                />
+              );
+            })}
           </div>
         </div>
 

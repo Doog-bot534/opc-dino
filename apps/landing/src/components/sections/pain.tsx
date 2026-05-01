@@ -1,7 +1,10 @@
-import { ChapterHead } from "@/components/chapter-head";
-import { t } from "@/i18n";
+"use client";
 
-/** Map pain card → english tag for principle.k mono key */
+import { ChapterHead } from "@/components/chapter-head";
+import { Parts } from "@/components/parts";
+import { useLocale } from "@/lib/locale-provider";
+
+/** Mono key per card — language-agnostic. The English subline only renders in zh mode. */
 const KEYS = [
   { k: "/ 01 · invisible", en: "Your work matters. They just can't find it." },
   { k: "/ 02 · translate", en: "Every community speaks differently." },
@@ -9,6 +12,7 @@ const KEYS = [
 ];
 
 export function Pain() {
+  const { t, locale } = useLocale();
   const dict = t.pain;
   return (
     <section
@@ -16,12 +20,10 @@ export function Pain() {
       className="border-t border-[var(--line-2)] bg-[var(--bg)] py-24 sm:py-28"
     >
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <ChapterHead n="/ 01" t="REALITY" cn="痛点" aside="§ / 没人说但都懂" />
+        <ChapterHead {...dict.chapter} />
 
         <p className="reveal mx-auto mb-12 max-w-3xl text-balance text-lg leading-relaxed text-[var(--ink-2)] sm:text-xl">
-          <span className="fade">你早就知道的事，</span>
-          <span className="mark">但没人愿意说出来</span>
-          <span className="fade">。</span>
+          <Parts parts={dict.titleParts} />
           <span className="block mt-2 text-sm text-[var(--muted)]">
             {dict.subtitle}
           </span>
@@ -35,7 +37,9 @@ export function Pain() {
                 <span className="k">{meta.k}</span>
                 <h3>
                   <span>{item.title}</span>
-                  {meta.en ? <span className="en">{meta.en}</span> : null}
+                  {locale === "zh" && meta.en ? (
+                    <span className="en">{meta.en}</span>
+                  ) : null}
                 </h3>
                 <p>{item.description}</p>
               </div>

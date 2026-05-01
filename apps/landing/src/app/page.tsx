@@ -7,10 +7,19 @@ import { FAQ } from "@/components/sections/faq";
 import { FooterCTA } from "@/components/sections/footer-cta";
 import { RevealOnScroll } from "@/components/reveal-on-scroll";
 import { SiteNav } from "@/components/site-nav";
+import { LocaleProvider } from "@/lib/locale-provider";
+import type { Locale } from "@/i18n";
 
-export default function Home() {
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: Promise<{ lang?: string }>;
+}) {
+  const params = await searchParams;
+  const initial: Locale = params.lang === "zh" ? "zh" : "en";
+
   return (
-    <>
+    <LocaleProvider initial={initial}>
       <SiteNav />
       <main>
         <Hero />
@@ -22,6 +31,6 @@ export default function Home() {
         <FooterCTA />
       </main>
       <RevealOnScroll />
-    </>
+    </LocaleProvider>
   );
 }

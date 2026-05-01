@@ -27,24 +27,27 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://opc.dinolabs.online
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "OPC.Dino — 让你的好东西，被它该被看见的人看见",
+    default:
+      "OPC.Dino — Let your good work be seen by the people who need it",
     template: "%s | OPC.Dino",
   },
   description:
-    "独立开发者的多平台 launch 工具。一个 URL，AI 拆出 Reddit / X / 即刻 / V2EX / Dev.to 等 10+ 平台原生发声，海外 + 中国双轨。BYO API key，$19 起。",
+    "The launch tool for indie devs. One URL → AI writes 10+ native posts (Reddit / X / Dev.to / Jike / V2EX / IH / PH). Global + China dual-track. BYO API key, $19/mo.",
   openGraph: {
     type: "website",
-    locale: "zh_CN",
+    locale: "en_US",
     url: siteUrl,
-    title: "OPC.Dino — 让你的好东西，被它该被看见的人看见",
+    title:
+      "OPC.Dino — Let your good work be seen by the people who need it",
     description:
-      "一个 URL，AI 拆出 10+ 平台原生发声 — 把你 6 个月写的代码，从工程师朋友圈，推到真正会用的人面前。",
+      "One URL. AI ships native posts to 10+ platforms — moving your 6 months of code from the engineer bubble to the people who actually need it.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "OPC.Dino — 让你的好东西，被它该被看见的人看见",
+    title:
+      "OPC.Dino — Let your good work be seen by the people who need it",
     description:
-      "独立开发者的多平台 launch 工具。海外 + 中国双轨，BYO API key，$19 起。",
+      "The launch tool for indie devs. Global + China dual-track. BYO API key, $19/mo.",
   },
 };
 
@@ -55,7 +58,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="zh-CN"
+      lang="en"
       className={`${outfit.variable} ${notoSansSC.variable} ${geistMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >

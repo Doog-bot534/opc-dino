@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-import { t } from "@/i18n";
+import { useLocale } from "@/lib/locale-provider";
+import { Parts } from "@/components/parts";
 
 /**
  * Hero — dinolabs style
@@ -11,14 +12,14 @@ import { t } from "@/i18n";
  * Layout (≥1024px): 1.15fr | 0.85fr   left = content, right = terminal
  * Mobile: single column, terminal stacks below
  *
- * Signature dinolabs touches:
- *   - mono eyebrow with brand-blue brackets
- *   - H1 with .mark (brand) and .fade (muted) inline word highlighting
- *   - dark terminal block (visual anchor in an otherwise light page)
+ * Title and subtitle render via mark/fade Parts arrays from i18n dict —
+ * one component, both languages.
  */
 export function Hero() {
+  const { t } = useLocale();
   const dict = t.hero;
   const count = t.meta.waitlistCount;
+  const term = dict.terminal;
 
   return (
     <section className="relative isolate overflow-hidden bg-[var(--bg)]">
@@ -41,23 +42,16 @@ export function Hero() {
         <div className="flex flex-col">
           <span className="hero-eyebrow reveal">
             <span className="bracket">[</span>
-            <span>独立开发者 · indie launch tool</span>
+            <span>{dict.eyebrow}</span>
             <span className="bracket">]</span>
           </span>
 
           <h1 className="reveal d1 mt-7 text-balance font-medium text-[var(--ink)] text-[44px] leading-[1.02] tracking-[-0.02em] sm:text-6xl md:text-[64px] lg:text-[72px] lg:leading-[0.98]">
-            <span className="fade">让你做的</span>
-            <span className="mark"> 好东西</span>
-            <span className="fade">，被它该</span>
-            <span className="mark"> 被看见的人</span>
-            <span className="fade"> 看见。</span>
+            <Parts parts={dict.titleParts} />
           </h1>
 
           <p className="reveal d2 mt-6 max-w-xl text-balance text-base text-[var(--muted)] sm:text-lg">
-            一个 URL，AI 拆出 <em className="brand">10+ 平台原生发声</em> — 把你{" "}
-            <span className="mark">6 个月写的代码</span>，
-            <span className="fade">从工程师朋友圈，</span>推到{" "}
-            <span className="mark">真正会用的人</span> 面前。
+            <Parts parts={dict.subtitleParts} />
           </p>
 
           <div className="reveal d3 mt-10 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
@@ -94,17 +88,17 @@ export function Hero() {
             <span className="d" />
             <span className="d" />
             <span className="d" />
-            <span className="title">~ opc@dino · launch.sh</span>
-            <span className="meta">zsh</span>
+            <span className="title">{term.title}</span>
+            <span className="meta">{term.meta}</span>
           </div>
           <div className="term-body">
             <div className="term-line">
               <span className="prompt">$</span>
-              <span className="user">opcdino launch </span>
-              <span className="accent">https://your-product.com</span>
+              <span className="user">{term.lines.cmdUser}</span>
+              <span className="accent">{term.lines.cmdUrl}</span>
             </div>
             <div className="term-line">
-              <span className="dim">  → 抓取产品页面，提炼卖点 / 用户画像…</span>
+              <span className="dim">{term.lines.ingest}</span>
             </div>
             <div className="term-line">
               <span className="ok">✓</span>
@@ -118,30 +112,32 @@ export function Hero() {
             <div className="term-line">
               <span className="ok">✓</span>
               即刻 · <span className="str">270 字</span>{" "}
-              <span className="dim">with hooks</span>
+              <span className="dim">{term.lines.readyDim}</span>
             </div>
             <div className="term-line">
               <span className="ok">✓</span>
               V2EX · <span className="str">720 chars</span>{" "}
-              <span className="dim">tech-style</span>
+              <span className="dim">{term.lines.techStyle}</span>
             </div>
             <div className="term-line">
               <span className="ok">✓</span>
               Dev.to · <span className="str">1500 chars</span>{" "}
-              <span className="dim">markdown</span>
+              <span className="dim">{term.lines.markdown}</span>
             </div>
             <div className="term-line">
               <span className="arrow">→</span>
-              <span className="dim">5 platforms ready · 7 待人工 review</span>
+              <span className="dim">{term.lines.summary}</span>
             </div>
             <div className="term-line">
-              <span className="accent">●</span> <span className="user">RUNNING</span>
+              <span className="accent">●</span>{" "}
+              <span className="user">{term.lines.running}</span>
             </div>
           </div>
           <div className="term-footer">
-            <span>next 16 · drizzle · resend</span>
+            <span>{term.stack}</span>
             <span>
-              <span className="val">●</span>WAITLIST
+              <span className="val">●</span>
+              {term.waitlistTag}
             </span>
           </div>
         </aside>

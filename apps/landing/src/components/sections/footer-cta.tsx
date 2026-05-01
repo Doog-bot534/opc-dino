@@ -1,8 +1,11 @@
+"use client";
+
 import Link from "next/link";
 import { Mail } from "lucide-react";
 
 import { WaitlistForm } from "@/components/waitlist-form";
-import { t } from "@/i18n";
+import { Parts } from "@/components/parts";
+import { useLocale } from "@/lib/locale-provider";
 
 /** 用 simple-icons CDN 当 footer 社交图标 */
 function BrandIcon({ slug, alt }: { slug: string; alt: string }) {
@@ -19,6 +22,7 @@ function BrandIcon({ slug, alt }: { slug: string; alt: string }) {
 }
 
 export function FooterCTA() {
+  const { t } = useLocale();
   const dict = t.ctaFooter;
   const f = t.footer;
   return (
@@ -38,16 +42,11 @@ export function FooterCTA() {
       <div className="mx-auto max-w-3xl px-5 py-28 text-center sm:px-8 sm:py-36">
         <span className="hero-eyebrow reveal mx-auto justify-center">
           <span className="bracket">[</span>
-          <span>/ 06 · waitlist</span>
+          <span>{dict.eyebrow}</span>
           <span className="bracket">]</span>
         </span>
         <h2 className="reveal d1 mt-6 text-balance font-medium tracking-[-0.02em] text-[var(--ink)] text-3xl sm:text-5xl md:text-6xl">
-          <span className="fade">让你的</span>
-          <span className="mark"> 好东西</span>
-          <span className="fade">，</span>
-          <span className="fade">被它该</span>
-          <span className="mark"> 被看见的人</span>
-          <span className="fade"> 看见。</span>
+          <Parts parts={dict.titleParts} />
         </h2>
         <p className="reveal d2 mx-auto mt-5 max-w-xl text-balance text-base text-[var(--muted)] sm:text-lg">
           {dict.subtitle}

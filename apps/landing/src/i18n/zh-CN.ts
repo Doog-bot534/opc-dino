@@ -3,8 +3,16 @@
  * ---------------------------------
  * 核心：让你做的好东西，被它该被看见的人看见
  * 3 情感锚：被看见 / 解决真问题 / 同时养活你
- * Section 标题在 sections/*.tsx 里 hardcoded（含 mark/fade span）
+ *
+ * mark/fade 拆分：所有 inline 高亮文案都用 parts 数组。每个 part = { kind: "fade" | "mark" | "plain" | "brand", text }，
+ * sections/*.tsx 用统一 renderer 渲染。这样 zh / en 共用一套组件代码。
  */
+
+export type Part =
+  | { kind: "fade"; text: string }
+  | { kind: "mark"; text: string }
+  | { kind: "plain"; text: string }
+  | { kind: "brand"; text: string };
 
 export const dict = {
   meta: {
@@ -17,20 +25,62 @@ export const dict = {
     pricing: "价格",
     faq: "FAQ",
     waitlist: "加入 waitlist",
+    langToggle: "EN",
   },
 
   hero: {
+    eyebrow: "独立开发者 · indie launch tool",
     badge: "Phase 0 · 仅开放 waitlist",
     title: "让你做的好东西，被它该被看见的人看见。",
+    titleParts: [
+      { kind: "fade", text: "让你做的" },
+      { kind: "mark", text: " 好东西" },
+      { kind: "fade", text: "，被它该" },
+      { kind: "mark", text: " 被看见的人" },
+      { kind: "fade", text: " 看见。" },
+    ] as Part[],
     subtitle:
       "一个 URL，AI 拆出 10+ 平台原生发声 — 把你 6 个月写的代码，从工程师朋友圈，推到真正会用的人面前。",
+    subtitleParts: [
+      { kind: "plain", text: "一个 URL，AI 拆出 " },
+      { kind: "brand", text: "10+ 平台原生发声" },
+      { kind: "plain", text: " — 把你 " },
+      { kind: "mark", text: "6 个月写的代码" },
+      { kind: "plain", text: "，" },
+      { kind: "fade", text: "从工程师朋友圈，" },
+      { kind: "plain", text: "推到 " },
+      { kind: "mark", text: "真正会用的人" },
+      { kind: "plain", text: " 面前。" },
+    ] as Part[],
     ctaPrimary: "加入 waitlist",
     ctaSecondary: "看 roadmap",
     socialProof: "海外 + 中国双轨 · BYO API key",
+    terminal: {
+      title: "~ opc@dino · launch.sh",
+      meta: "zsh",
+      lines: {
+        cmdUser: "opcdino launch ",
+        cmdUrl: "https://your-product.com",
+        ingest: "  → 抓取产品页面，提炼卖点 / 用户画像…",
+        readyDim: "with hooks",
+        techStyle: "tech-style",
+        markdown: "markdown",
+        summary: "5 platforms ready · 7 待人工 review",
+        running: "RUNNING",
+      },
+      stack: "next 16 · drizzle · resend",
+      waitlistTag: "WAITLIST",
+    },
   },
 
   pain: {
+    chapter: { n: "/ 01", t: "REALITY", cn: "痛点", aside: "§ / 没人说但都懂" },
     title: "你早就知道的事，但没人愿意说出来。",
+    titleParts: [
+      { kind: "fade", text: "你早就知道的事，" },
+      { kind: "mark", text: "但没人愿意说出来" },
+      { kind: "fade", text: "。" },
+    ] as Part[],
     subtitle: "三件 indie 没人说但都懂的事。",
     items: [
       {
@@ -52,7 +102,14 @@ export const dict = {
   },
 
   solution: {
+    chapter: { n: "/ 02", t: "WORKFLOW", cn: "工作流", aside: "§ / URL → 10+ 平台" },
     title: "一个 URL，翻译成每个社区都听得懂的话。",
+    titleParts: [
+      { kind: "plain", text: "一个 URL，" },
+      { kind: "fade", text: "翻译成" },
+      { kind: "mark", text: " 每个社区都听得懂的话" },
+      { kind: "fade", text: "。" },
+    ] as Part[],
     subtitle:
       "你只做一件事：贴上产品 URL。剩下的拆解、撰写、发布、回收数据，AI 接管。",
     steps: [
@@ -72,13 +129,28 @@ export const dict = {
           "海外 6 个 API 直发，半自动 4 个一键打开，中国 2 个容器代理。24 / 72 / 168h 盯互动，哪条文案钓到了你的人，回头就知道。",
       },
     ],
+    terminalCaption: "opc launch",
+    terminalLines: {
+      cmd: "opc launch https://your-product.com",
+      step1: "  → 抓取产品信息...",
+      step2: "  → AI 生成 7 平台原生格式内容...",
+      step3: "  ✓ Reddit · X · Threads · Dev.to · 即刻 · V2EX · PH",
+      step4: "  → 一键发布或跳转目标平台",
+    },
   },
 
   platforms: {
+    chapter: { n: "/ 03", t: "REACH", cn: "覆盖", aside: "§ / 海外 + 中国" },
     title: "海外 + 中国，一起覆盖。",
+    titleParts: [
+      { kind: "plain", text: "海外 + 中国，" },
+      { kind: "mark", text: " 一起覆盖" },
+      { kind: "fade", text: "。" },
+    ] as Part[],
     subtitle: "不让你订两套工具，也不让你只发英文圈、忘了中文社区。",
     overseasLabel: "海外平台",
     chinaLabel: "中国平台",
+    countSuffix: "个",
     transparencyNote:
       "我们不会替你伪造账号，也不做养号。所有发布都用你自己的账号、你自己的 OAuth / cookie。封号风险由平台 ToS 决定，我们能做的就是降低被识别为机器的概率。",
     statusLabels: {
@@ -89,7 +161,15 @@ export const dict = {
   },
 
   pricing: {
+    chapter: { n: "/ 04", t: "PRICING", cn: "价格", aside: "§ / 你赚多少归你" },
     title: "你产品赚多少，归你。",
+    titleParts: [
+      { kind: "mark", text: "你产品赚多少，归你" },
+      { kind: "fade", text: "。" },
+      { kind: "plain", text: "我们只赚把它推出去的工具费 — " },
+      { kind: "brand", text: "BYO API key" },
+      { kind: "fade", text: "，你自带 X / Reddit 账号，我们不替你买推文额度。" },
+    ] as Part[],
     subtitle:
       "我们只赚把它推出去的工具费。所有档位都是 BYO API key — 你自带 X / Reddit 账号，我们不替你买推文额度。",
     perMonth: "/月",
@@ -141,7 +221,13 @@ export const dict = {
   },
 
   faq: {
+    chapter: { n: "/ 05", t: "FAQ", cn: "你可能在想的几个问题", aside: "§ / asked & answered" },
     title: "你可能在想的几个问题",
+    titleParts: [
+      { kind: "fade", text: "你可能在想的" },
+      { kind: "mark", text: " 几个问题" },
+      { kind: "fade", text: "。都是我们自己问过自己的。" },
+    ] as Part[],
     subtitle: "都是我们自己问过自己的。",
     items: [
       {
@@ -172,7 +258,16 @@ export const dict = {
   },
 
   ctaFooter: {
+    eyebrow: "/ 06 · waitlist",
     title: "让你的好东西，被它该被看见的人看见。",
+    titleParts: [
+      { kind: "fade", text: "让你的" },
+      { kind: "mark", text: " 好东西" },
+      { kind: "fade", text: "，" },
+      { kind: "fade", text: "被它该" },
+      { kind: "mark", text: " 被看见的人" },
+      { kind: "fade", text: " 看见。" },
+    ] as Part[],
     subtitle:
       "加入 waitlist。等 v0 开门的时候，你是第一批拿钥匙的人。早鸟前 100 名享首年 5 折永久锁定。",
     smallNote:
@@ -199,6 +294,6 @@ export const dict = {
     github: "GitHub",
     email: "联系我们",
   },
-} as const;
+};
 
 export type Dict = typeof dict;

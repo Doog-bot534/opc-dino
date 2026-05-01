@@ -1,11 +1,15 @@
+"use client";
+
 import Link from "next/link";
 import { Check } from "lucide-react";
 
 import { ChapterHead } from "@/components/chapter-head";
-import { t } from "@/i18n";
+import { Parts } from "@/components/parts";
+import { useLocale } from "@/lib/locale-provider";
 import { cn } from "@/lib/utils";
 
 export function Pricing() {
+  const { t } = useLocale();
   const dict = t.pricing;
 
   return (
@@ -14,18 +18,10 @@ export function Pricing() {
       className="border-t border-[var(--line-2)] bg-[var(--bg)] py-24 sm:py-28"
     >
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <ChapterHead
-          n="/ 04"
-          t="PRICING"
-          cn="价格"
-          aside="§ / 你赚多少归你"
-        />
+        <ChapterHead {...dict.chapter} />
 
         <p className="reveal mx-auto mb-12 max-w-3xl text-balance text-lg leading-relaxed text-[var(--ink-2)] sm:text-xl">
-          <span className="mark">你产品赚多少，归你</span>
-          <span className="fade">。</span>我们只赚把它推出去的工具费 —{" "}
-          <em className="brand">BYO API key</em>
-          <span className="fade">，你自带 X / Reddit 账号，我们不替你买推文额度。</span>
+          <Parts parts={dict.titleParts} />
         </p>
 
         <div className="reveal d1 mx-auto grid max-w-5xl gap-5 md:grid-cols-3">

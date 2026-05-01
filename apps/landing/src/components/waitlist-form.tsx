@@ -6,7 +6,7 @@ import { toast } from "sonner";
 import { z } from "zod";
 
 import { Input } from "@/components/ui/input";
-import { t } from "@/i18n";
+import { useLocale } from "@/lib/locale-provider";
 import { cn } from "@/lib/utils";
 
 const emailSchema = z.string().email();
@@ -28,6 +28,7 @@ export function WaitlistForm({
   const [email, setEmail] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
+  const { t } = useLocale();
   const dict = t.waitlistForm;
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {

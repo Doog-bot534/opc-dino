@@ -1,7 +1,12 @@
-import { dict as zhCN } from "./zh-CN";
+import { dict as zhDict } from "./zh-CN";
+import { dict as enDict } from "./en";
 
-export type Locale = "zh-CN" | "en";
+export type Locale = "en" | "zh";
+export const DEFAULT_LOCALE: Locale = "en";
 
-// Phase 0：仅中文。语言切换 UI 待 Phase 1。
-export const t = zhCN;
-export type { Dict } from "./zh-CN";
+export const dicts: Record<Locale, typeof zhDict> = {
+  en: enDict,
+  zh: zhDict,
+};
+
+export type { Dict, Part } from "./zh-CN";
