@@ -19,7 +19,7 @@
 
 **域名可用性（实测）**
 - `opcdino.com` — TAKEN
-- `opcdino.so` — **可用** ✅
+- `opc.dinolabs.online` — **可用** ✅
 - `opcdino.ai` — TAKEN
 - `opcdino.dev` — TAKEN
 
@@ -132,18 +132,18 @@
 
 ## 推荐
 
-**首选：OPC.Dino+ `opcdino.so`**
+**首选：OPC.Dino+ `opc.dinolabs.online`**
 
 **理由（三条）**：
 
 1. **意象 × 动作 × 中英通吃** — "Post"（发）+ "Wave"（浪）一秒讲清产品做什么；中文译名"OPC.Dino"在即刻 / V2EX 自然，海外读法也舒服。其他候选要么锁死 ICP（OPClaunch / ShipIndie 撞墙），要么 SEO 受污染（Lighthous），要么过于通用（AllChannels）。
 
-2. **域名拿得到一个干净的 `.so`** — `.com` 已普遍是 reseller 高价标的，`opcdino.so` 在 sonic 注册局 `No Object Found`，年费 $30-40 即可拿下。对 indie SaaS 这就是实际能买的最好结果。`.so` 还自带 "Software" 双关。
+2. **域名拿得到一个干净的 `.so`** — `.com` 已普遍是 reseller 高价标的，`opc.dinolabs.online` 在 sonic 注册局 `No Object Found`，年费 $30-40 即可拿下。对 indie SaaS 这就是实际能买的最好结果。`.so` 还自带 "Software" 双关。
 
 3. **不锁死 ICP，但又有方向** — 不像 OPClaunch / ShipIndie 把"一人公司""indie"焊死在品牌里，OPC.Dino 既能讲 indie 故事，将来扩到 5 人小团队 / agency 也不别扭。Phase 2 需求池接入时也能解释成"先看到浪从哪来，再决定推哪道浪"。
 
 **推荐域名组合**：
-- 主域名：`opcdino.so`（产品官网）
+- 主域名：`opc.dinolabs.online`（产品官网）
 - 备选可一起注册：`opcdino.io`（如可用，做技术文档）/ `opcdino.app`（做应用入口）
 
 **次选**（如果觉得 OPC.Dino 太"营销味"）：**OPClaunch + `opclaunch.ai`**

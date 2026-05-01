@@ -53,7 +53,7 @@ Visual: pricing card + lock icon
 
 [0:55–1:00] CTA
 Voiceover: "Phase 0 waitlist open now. First hundred get fifty percent off year one."
-Visual: opcdino.so URL + "Join Waitlist" button glow
+Visual: opc.dinolabs.online URL + "Join Waitlist" button glow
 ```
 
 ---
@@ -91,7 +91,7 @@ Reddit 长帖、X thread、Dev.to 博客、Indie Hackers pitch。
 
 [0:55–1:00] CTA
 旁白："Phase 0 waitlist 开放。前 100 名首年五折永久锁定。"
-画面：opcdino.so + "加入 Waitlist" 按钮高亮
+画面：opc.dinolabs.online + "加入 Waitlist" 按钮高亮
 ```
 
 ---

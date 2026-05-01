@@ -75,7 +75,7 @@ export function FooterCTA() {
               {f.github}
             </Link>
             <Link
-              href="mailto:hi@opcdino.so"
+              href="mailto:hi@opc.dinolabs.online"
               className="inline-flex items-center gap-1.5 transition-colors hover:text-foreground"
             >
               <Mail className="h-3.5 w-3.5" />

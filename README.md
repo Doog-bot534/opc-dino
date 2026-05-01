@@ -1,6 +1,6 @@
-# OPC.Dino / opcdino.so
+# OPC.Dino / opc.dinolabs.online
 
-> 品牌名：**OPC.Dino** · 域名：[opcdino.so](https://opcdino.so)
+> 品牌名：**OPC.Dino** · 域名：[opc.dinolabs.online](https://opc.dinolabs.online)
 > 当前阶段：Phase 0（landing + waitlist）
 > 启动日期：2026-04-30
 > 命名调研：`docs/launch-copy/brand-naming.md`

@@ -100,7 +100,7 @@ Waitlist: {{LANDING_URL}}
 ```
 Few things I left out of the post to keep it short:
 
-1. Why "OPC.Dino" — Post (verb) + Wave (one product = one wave reaching multiple shores). Domain is opcdino.so because every reasonable .com is taken in 2026 and I'm okay with that.
+1. Why "OPC.Dino" — Post (verb) + Wave (one product = one wave reaching multiple shores). Domain is opc.dinolabs.online because every reasonable .com is taken in 2026 and I'm okay with that.
 
 2. Self-hosting — I'll open-source the platform-adapter layer once Phase 1 ships (following Postiz's model). The AI prompt templates will stay closed.
 
