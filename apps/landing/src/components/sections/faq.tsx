@@ -18,7 +18,7 @@ export function FAQ() {
       id="faq"
       className="border-t border-[var(--line-2)] bg-[var(--bg)] py-24 sm:py-28"
     >
-      <div className="mx-auto max-w-3xl px-5 sm:px-8">
+      <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <ChapterHead {...dict.chapter} />
 
         <p className="reveal mb-10 text-left text-base text-[var(--muted)]">
