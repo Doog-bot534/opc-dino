@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .d { fill: #0A0E1A; }
+    @media (prefers-color-scheme: dark) { .d { fill: #F4F6FA; } }
+  </style>
+  <path class="d" fill-rule="evenodd" d="M8 14h16a17 17 0 0 1 0 34H8zM14 20h10a11 11 0 0 1 0 22H14z"/>
+  <circle cx="46" cy="44" r="4" fill="#00B8D9"/>
+</svg>
