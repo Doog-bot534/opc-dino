@@ -42,10 +42,12 @@ export function FooterCTA() {
           <span className="bracket">]</span>
         </span>
         <h2 className="reveal d1 mt-6 text-balance font-medium tracking-[-0.02em] text-[var(--ink)] text-3xl sm:text-5xl md:text-6xl">
-          先把<span className="mark">产品做完</span>
-          <span className="fade">，再来想推广 — </span>
-          <span className="mark">OPC.Dino</span>
-          <span className="fade"> 等你。</span>
+          <span className="fade">让你的</span>
+          <span className="mark"> 好东西</span>
+          <span className="fade">，</span>
+          <span className="fade">被它该</span>
+          <span className="mark"> 被看见的人</span>
+          <span className="fade"> 看见。</span>
         </h2>
         <p className="reveal d2 mx-auto mt-5 max-w-xl text-balance text-base text-[var(--muted)] sm:text-lg">
           {dict.subtitle}

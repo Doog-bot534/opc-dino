@@ -2,9 +2,9 @@ import { ChapterHead } from "@/components/chapter-head";
 import { t } from "@/i18n";
 
 const KEYS = [
-  { k: "/ step.01", en: "Paste a URL." },
-  { k: "/ step.02", en: "AI splits it 10+ ways." },
-  { k: "/ step.03", en: "Publish + collect." },
+  { k: "/ 01 · ingest", en: "Drop the URL." },
+  { k: "/ 02 · translate", en: "Translate to 10+ native voices." },
+  { k: "/ 03 · ship", en: "Ship and watch." },
 ];
 
 export function Solution() {
@@ -18,15 +18,15 @@ export function Solution() {
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <ChapterHead
           n="/ 02"
-          t="SOLUTION"
-          cn="把 launch 做成流水线"
-          aside="§ / one URL → 10+ posts"
+          t="WORKFLOW"
+          cn="工作流"
+          aside="§ / URL → 10+ 平台"
         />
 
         <p className="reveal mx-auto mb-12 max-w-3xl text-balance text-lg leading-relaxed text-[var(--ink-2)] sm:text-xl">
-          你只做<span className="mark"> 一件事</span>
-          <span className="fade">：贴上产品 URL。</span>剩下的{" "}
-          <em className="brand">拆解 / 撰写 / 发布 / 回收数据</em>，AI 接管。
+          一个 URL，<span className="fade">翻译成</span>
+          <span className="mark"> 每个社区都听得懂的话</span>
+          <span className="fade">。</span>
           <span className="block mt-2 text-sm text-[var(--muted)]">
             {dict.subtitle}
           </span>

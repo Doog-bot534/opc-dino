@@ -1,14 +1,16 @@
 /**
- * OPC.Dino 中文文案
+ * OPC.Dino 中文文案 — Direction A
  * ---------------------------------
- * 来源：docs/launch-copy/landing-copy.md（不要改文案，只对结构做适配）
+ * 核心：让你做的好东西，被它该被看见的人看见
+ * 3 情感锚：被看见 / 解决真问题 / 同时养活你
+ * Section 标题在 sections/*.tsx 里 hardcoded（含 mark/fade span）
  */
 
 export const dict = {
   meta: {
     siteName: "OPC.Dino",
     siteNameZh: "OPC.Dino",
-    waitlistCount: 0, // 占位计数，未来从 Resend Audience API 拉取
+    waitlistCount: 0,
   },
 
   nav: {
@@ -19,62 +21,62 @@ export const dict = {
 
   hero: {
     badge: "Phase 0 · 仅开放 waitlist",
-    title: "一个 URL，发完所有平台。",
+    title: "让你做的好东西，被它该被看见的人看见。",
     subtitle:
-      "AI 把你的产品拆成 10+ 平台原生内容包 — 海外、中国，一套搞定。",
-    ctaPrimary: "加入 Waitlist（早鸟 5 折）",
-    ctaSecondary: "看产品 Roadmap →",
-    socialProof: "出海 · 中国双轨 · BYO API key",
+      "一个 URL，AI 拆出 10+ 平台原生发声 — 把你 6 个月写的代码，从工程师朋友圈，推到真正会用的人面前。",
+    ctaPrimary: "加入 waitlist",
+    ctaSecondary: "看 roadmap",
+    socialProof: "海外 + 中国双轨 · BYO API key",
   },
 
   pain: {
-    title: "做 indie 的人，都在这三件事上反复栽。",
-    subtitle: "需求池里的真实引语，改写自一线独立开发者。",
+    title: "你早就知道的事，但没人愿意说出来。",
+    subtitle: "三件 indie 没人说但都懂的事。",
     items: [
       {
-        title: "产品做完，没人知道",
+        title: "你做的东西比你想的有人需要",
         description:
-          "你花了 3 个月写代码，发布只用 1 天。然后没人来。最痛的不是不会做，是不知道怎么推。",
+          "6 个月磨出来的产品，最后只有工程师朋友看见。不是产品不好，是它从没出现在真正会用它的人面前。",
       },
       {
-        title: "每个平台都要重写一遍",
+        title: "每个社区有自己的方言",
         description:
-          "Reddit 要长帖、X 要 thread、即刻要短钩子、V2EX 要技术细节 — 一个产品发 7 遍写到崩溃。",
+          "Reddit 的 hook 在即刻没用，即刻的痛点开场到 V2EX 会被踩。同一个产品，要写 10 份文案。每次。",
       },
       {
-        title: "海外工具不懂中国",
+        title: "推广不是营销，是让价值流动",
         description:
-          "Buffer 不发即刻，蚁小二不发 Reddit。出海 indie 现在要订两套工具，每月多花 ¥300。",
+          "你解决了真问题。他们正在搜索答案。把你和他们连上，是让 indie 这件事能养活你的最便宜的方法。",
       },
     ],
   },
 
   solution: {
-    title: "把 launch 这件事，做成一条流水线。",
+    title: "一个 URL，翻译成每个社区都听得懂的话。",
     subtitle:
       "你只做一件事：贴上产品 URL。剩下的拆解、撰写、发布、回收数据，AI 接管。",
     steps: [
       {
-        title: "贴上产品 URL",
+        title: "把产品 URL 拍进去",
         description:
-          "OPC.Dino 用 AI 读完你的产品页面，自动提炼卖点、用户画像和差异化。",
+          "AI 读你的 landing、screenshot、changelog，理解你为什么做这个东西。",
       },
       {
-        title: "AI 拆出 10+ 平台原生稿",
+        title: "AI 写出 10+ 平台的发声",
         description:
-          "中文长帖、英文 thread、技术博客、独立开发者社区 pitch — 每一份都按那个平台用户会读的方式写。",
+          "Reddit 长帖 / X thread / 即刻短钩 / V2EX 技术贴 / Dev.to 博客 — 每个平台原生格式，不是同款文案换标签。",
       },
       {
-        title: "一键发布 + 数据回收",
+        title: "一键发，同时回收数据",
         description:
-          "海外 6 平台 OAuth 直发，中国走 Electron 容器代理；24h / 72h / 168h 自动回收阅读、点赞、转化。",
+          "海外 6 个 API 直发，半自动 4 个一键打开，中国 2 个容器代理。24 / 72 / 168h 盯互动，哪条文案钓到了你的人，回头就知道。",
       },
     ],
   },
 
   platforms: {
-    title: "海外 + 中国，一套覆盖。",
-    subtitle: "目前我们查到唯一同时认真做这两边的工具。",
+    title: "海外 + 中国，一起覆盖。",
+    subtitle: "不让你订两套工具，也不让你只发英文圈、忘了中文社区。",
     overseasLabel: "海外平台",
     chinaLabel: "中国平台",
     transparencyNote:
@@ -87,11 +89,11 @@ export const dict = {
   },
 
   pricing: {
-    title: "一档一档来，不强卖。",
+    title: "你产品赚多少，归你。",
     subtitle:
-      "所有档位都是 BYO API key — 你自带 X / Reddit 账号，我们不替你买推文额度。",
+      "我们只赚把它推出去的工具费。所有档位都是 BYO API key — 你自带 X / Reddit 账号，我们不替你买推文额度。",
     perMonth: "/月",
-    cta: "加入 Waitlist",
+    cta: "加入 waitlist",
     recommendedBadge: "推荐",
     earlyBird:
       "Phase 0 加入 waitlist 的前 100 名，正式上线后第一年 5 折永久锁定。",
@@ -100,7 +102,7 @@ export const dict = {
         id: "solo",
         name: "Solo",
         price: 19,
-        tagline: "刚开始 build 的 indie，先用这个",
+        tagline: "一个人，一个项目",
         features: [
           "1 个产品 / 项目",
           "海外 6 平台 + 中国 2 平台 直发",
@@ -113,12 +115,12 @@ export const dict = {
         id: "maker",
         name: "Maker",
         price: 29,
-        tagline: "手上 2-3 个项目同时跑，每周都在 launch",
+        tagline: "多个项目，全平台覆盖",
         features: [
           "3 个产品 / 项目",
-          "海外 10 平台 + 中国 2 平台 直发 + 4 半自动平台",
+          "海外 10 平台 + 中国 2 平台 直发 + 4 半自动",
           "AI 内容生成 200 次/月",
-          "数据回收 24/72/168h 三节点 + 自动追评建议",
+          "数据回收 24 / 72 / 168h 三节点 + 自动追评建议",
         ],
         recommended: true,
       },
@@ -126,12 +128,12 @@ export const dict = {
         id: "studio",
         name: "Studio",
         price: 59,
-        tagline: "一人公司或 2-5 人小团队，多产品矩阵",
+        tagline: "小团队，多人协作",
         features: [
           "10 个产品 / 项目",
           "全平台覆盖 + 多账号矩阵（每平台最多 3 个账号）",
           "AI 内容生成 1000 次/月 + 自定义品牌口吻训练",
-          "优先客服 + 接入 Phase 2 需求池（上线后免费）",
+          "优先支持 + Phase 2 需求池（上线后免费）",
         ],
         recommended: false,
       },
@@ -170,15 +172,16 @@ export const dict = {
   },
 
   ctaFooter: {
-    title: "先把产品做完，再来想推广 — OPC.Dino 等你。",
-    subtitle: "早鸟 waitlist 仅前 100 名享首年 5 折永久锁定。",
+    title: "让你的好东西，被它该被看见的人看见。",
+    subtitle:
+      "加入 waitlist。等 v0 开门的时候，你是第一批拿钥匙的人。早鸟前 100 名享首年 5 折永久锁定。",
     smallNote:
-      "由一个独立开发者在做。每两周一封 build 进度邮件，可随时退订。Phase 0 阶段，所有内容用 OPC.Dino 自身（人工 + AI）推送 — 你看到的就是产品在跑自己。",
+      "0 spam · 2 周一封 build log · 随时退订 · Phase 0 阶段所有内容用 OPC.Dino 自身（人工 + AI）推送 — 你看到的就是产品在跑自己。",
   },
 
   waitlistForm: {
     placeholder: "你的邮箱",
-    submit: "加入 Waitlist",
+    submit: "加入 waitlist",
     submitting: "提交中…",
     successTitle: "已加入 waitlist",
     successDescription: "我们会第一时间通过邮件通知你产品上线。",

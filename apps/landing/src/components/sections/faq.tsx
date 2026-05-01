@@ -23,8 +23,9 @@ export function FAQ() {
         />
 
         <p className="reveal mb-10 text-base text-[var(--muted)]">
-          都是<span className="mark"> 我们自己 </span>
-          <span className="fade">问过自己的。</span>
+          <span className="fade">你可能在想的</span>
+          <span className="mark"> 几个问题</span>
+          <span className="fade">。都是我们自己问过自己的。</span>
         </p>
 
         <Accordion

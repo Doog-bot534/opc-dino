@@ -27,24 +27,24 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://opc.dinolabs.online
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "OPC.Dino — 一个 URL，发到 10+ 平台 | 独立开发者 launch 工具",
+    default: "OPC.Dino — 让你的好东西，被它该被看见的人看见",
     template: "%s | OPC.Dino",
   },
   description:
-    "AI 把你的产品拆成 10+ 平台原生内容，海外 Reddit/X/Threads + 中国即刻/V2EX 一套发完。BYO API key，$19 起。出海中国独立开发者专属。",
+    "独立开发者的多平台 launch 工具。一个 URL，AI 拆出 Reddit / X / 即刻 / V2EX / Dev.to 等 10+ 平台原生发声，海外 + 中国双轨。BYO API key，$19 起。",
   openGraph: {
     type: "website",
     locale: "zh_CN",
     url: siteUrl,
-    title: "OPC.Dino — 一个 URL，发完所有平台",
+    title: "OPC.Dino — 让你的好东西，被它该被看见的人看见",
     description:
-      "AI 把你的产品拆成 10+ 平台原生内容包 — 海外、中国，一套搞定。",
+      "一个 URL，AI 拆出 10+ 平台原生发声 — 把你 6 个月写的代码，从工程师朋友圈，推到真正会用的人面前。",
   },
   twitter: {
     card: "summary_large_image",
-    title: "OPC.Dino — 一个 URL，发完所有平台",
+    title: "OPC.Dino — 让你的好东西，被它该被看见的人看见",
     description:
-      "AI 把你的产品拆成 10+ 平台原生内容包 — 海外、中国，一套搞定。",
+      "独立开发者的多平台 launch 工具。海外 + 中国双轨，BYO API key，$19 起。",
   },
 };
 

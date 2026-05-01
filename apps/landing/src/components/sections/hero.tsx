@@ -46,16 +46,18 @@ export function Hero() {
           </span>
 
           <h1 className="reveal d1 mt-7 text-balance font-medium text-[var(--ink)] text-[44px] leading-[1.02] tracking-[-0.02em] sm:text-6xl md:text-[64px] lg:text-[72px] lg:leading-[0.98]">
-            <span className="mark">一个 URL</span>
-            <span className="fade">，发到 </span>
-            <span className="mark">10+ 平台</span>
-            <span className="fade">。</span>
+            <span className="fade">让你做的</span>
+            <span className="mark"> 好东西</span>
+            <span className="fade">，被它该</span>
+            <span className="mark"> 被看见的人</span>
+            <span className="fade"> 看见。</span>
           </h1>
 
           <p className="reveal d2 mt-6 max-w-xl text-balance text-base text-[var(--muted)] sm:text-lg">
-            AI 把你的产品拆成 <em className="brand">10+ 平台原生内容包</em>{" "}
-            — <span className="mark">海外</span>、
-            <span className="mark">中国</span>，一套搞定。
+            一个 URL，AI 拆出 <em className="brand">10+ 平台原生发声</em> — 把你{" "}
+            <span className="mark">6 个月写的代码</span>，
+            <span className="fade">从工程师朋友圈，</span>推到{" "}
+            <span className="mark">真正会用的人</span> 面前。
           </p>
 
           <div className="reveal d3 mt-10 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">

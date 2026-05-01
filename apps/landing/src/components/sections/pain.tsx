@@ -3,9 +3,9 @@ import { t } from "@/i18n";
 
 /** Map pain card → english tag for principle.k mono key */
 const KEYS = [
-  { k: "/ 01 · ship", en: "Built but nobody knows." },
-  { k: "/ 02 · rewrite", en: "Same product, 7 different posts." },
-  { k: "/ 03 · split", en: "Two tools, two regions, twice the cost." },
+  { k: "/ 01 · invisible", en: "Your work matters. They just can't find it." },
+  { k: "/ 02 · translate", en: "Every community speaks differently." },
+  { k: "/ 03 · flow", en: "Distribution = letting value reach." },
 ];
 
 export function Pain() {
@@ -16,13 +16,11 @@ export function Pain() {
       className="border-t border-[var(--line-2)] bg-[var(--bg)] py-24 sm:py-28"
     >
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <ChapterHead n="/ 01" t="PAIN" cn="痛点" aside="§ / 做完没人知道" />
+        <ChapterHead n="/ 01" t="REALITY" cn="痛点" aside="§ / 没人说但都懂" />
 
         <p className="reveal mx-auto mb-12 max-w-3xl text-balance text-lg leading-relaxed text-[var(--ink-2)] sm:text-xl">
-          做 indie 的人，都在
-          <span className="mark"> 这三件事 </span>
-          上反复
-          <span className="mark">栽</span>
+          <span className="fade">你早就知道的事，</span>
+          <span className="mark">但没人愿意说出来</span>
           <span className="fade">。</span>
           <span className="block mt-2 text-sm text-[var(--muted)]">
             {dict.subtitle}

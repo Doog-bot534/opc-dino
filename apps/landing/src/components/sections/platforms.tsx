@@ -102,14 +102,14 @@ export function Platforms() {
         <ChapterHead
           n="/ 03"
           t="REACH"
-          cn="海外 + 中国，一套覆盖"
-          aside="§ / overseas + cn"
+          cn="覆盖"
+          aside="§ / 海外 + 中国"
         />
 
         <p className="reveal mx-auto mb-12 max-w-3xl text-balance text-lg leading-relaxed text-[var(--ink-2)] sm:text-xl">
-          目前我们查到{" "}
-          <span className="mark">唯一同时认真做这两边</span>
-          <span className="fade"> 的工具。</span>
+          海外 + 中国，
+          <span className="mark"> 一起覆盖</span>
+          <span className="fade">。</span>
           <span className="block mt-2 text-sm text-[var(--muted)]">
             {dict.subtitle}
           </span>

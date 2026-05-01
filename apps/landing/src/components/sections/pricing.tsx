@@ -17,15 +17,15 @@ export function Pricing() {
         <ChapterHead
           n="/ 04"
           t="PRICING"
-          cn="一档一档来"
-          aside="§ / BYO API key"
+          cn="价格"
+          aside="§ / 你赚多少归你"
         />
 
         <p className="reveal mx-auto mb-12 max-w-3xl text-balance text-lg leading-relaxed text-[var(--ink-2)] sm:text-xl">
-          不<span className="mark">强卖</span>
-          <span className="fade">。</span>所有档位都是{" "}
+          <span className="mark">你产品赚多少，归你</span>
+          <span className="fade">。</span>我们只赚把它推出去的工具费 —{" "}
           <em className="brand">BYO API key</em>
-          <span className="fade"> — 你自带 X / Reddit 账号，我们不替你买推文额度。</span>
+          <span className="fade">，你自带 X / Reddit 账号，我们不替你买推文额度。</span>
         </p>
 
         <div className="reveal d1 mx-auto grid max-w-5xl gap-5 md:grid-cols-3">
