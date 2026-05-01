@@ -106,7 +106,7 @@ export function Platforms() {
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <ChapterHead {...dict.chapter} />
 
-        <p className="reveal mx-auto mb-12 max-w-3xl text-balance text-lg leading-relaxed text-[var(--ink-2)] sm:text-xl">
+        <p className="reveal mb-12 max-w-3xl text-left text-lg leading-relaxed text-[var(--ink-2)] sm:text-xl">
           <Parts parts={dict.titleParts} />
           <span className="block mt-2 text-sm text-[var(--muted)]">
             {dict.subtitle}

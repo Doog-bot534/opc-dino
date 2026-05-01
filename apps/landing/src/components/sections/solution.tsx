@@ -23,7 +23,7 @@ export function Solution() {
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <ChapterHead {...dict.chapter} />
 
-        <p className="reveal mx-auto mb-12 max-w-3xl text-balance text-lg leading-relaxed text-[var(--ink-2)] sm:text-xl">
+        <p className="reveal mb-12 max-w-3xl text-left text-lg leading-relaxed text-[var(--ink-2)] sm:text-xl">
           <Parts parts={dict.titleParts} />
           <span className="block mt-2 text-sm text-[var(--muted)]">
             {dict.subtitle}
@@ -48,8 +48,8 @@ export function Solution() {
           })}
         </div>
 
-        {/* Code/terminal mock — keep as visual anchor under principles */}
-        <div className="reveal d2 mt-12 mx-auto max-w-3xl overflow-hidden rounded-2xl border border-[var(--line)] bg-white shadow-[0_1px_3px_rgba(17,24,39,0.04)]">
+        {/* Code/terminal mock — full width, matches section container */}
+        <div className="reveal d2 mt-12 w-full overflow-hidden rounded-2xl border border-[var(--line)] bg-white shadow-[0_1px_3px_rgba(17,24,39,0.04)]">
           <div className="flex items-center gap-1.5 border-b border-[var(--line-2)] bg-[var(--bg-1)] px-4 py-2.5">
             <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
             <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />

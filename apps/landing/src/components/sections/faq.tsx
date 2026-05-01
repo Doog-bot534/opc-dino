@@ -21,7 +21,7 @@ export function FAQ() {
       <div className="mx-auto max-w-3xl px-5 sm:px-8">
         <ChapterHead {...dict.chapter} />
 
-        <p className="reveal mb-10 text-base text-[var(--muted)]">
+        <p className="reveal mb-10 text-left text-base text-[var(--muted)]">
           <Parts parts={dict.titleParts} />
         </p>
 
