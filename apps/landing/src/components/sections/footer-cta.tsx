@@ -9,7 +9,7 @@ function BrandIcon({ slug, alt }: { slug: string; alt: string }) {
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      src={`https://cdn.simpleicons.org/${slug}/9f9fa9`}
+      src={`https://cdn.simpleicons.org/${slug}/4b5563`}
       alt={alt}
       width={14}
       height={14}
@@ -24,43 +24,49 @@ export function FooterCTA() {
   return (
     <section
       id="waitlist"
-      className="relative isolate overflow-hidden border-t border-border/50 bg-background"
+      className="relative isolate overflow-hidden border-t border-[var(--line-2)] bg-[var(--bg-1)]"
     >
       <div
         aria-hidden
-        className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_60%_50%_at_50%_100%,oklch(0.4_0.05_270/0.5),transparent_70%)]"
+        className="absolute inset-0 -z-10"
+        style={{
+          background:
+            "radial-gradient(ellipse 60% 50% at 50% 100%, var(--brand-glow), transparent 70%)",
+        }}
       />
 
-      <div className="mx-auto max-w-3xl px-4 py-24 text-center sm:px-6 sm:py-32">
-        <h2 className="text-balance bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-3xl font-semibold tracking-tight text-transparent sm:text-4xl md:text-5xl">
+      <div className="mx-auto max-w-3xl px-5 py-28 text-center sm:px-8 sm:py-36">
+        <h2 className="text-balance font-medium tracking-[-0.02em] text-[var(--ink)] text-3xl sm:text-5xl md:text-6xl">
           {dict.title}
         </h2>
-        <p className="mx-auto mt-4 max-w-xl text-balance text-base text-muted-foreground">
+        <p className="mx-auto mt-5 max-w-xl text-balance text-base text-[var(--muted)] sm:text-lg">
           {dict.subtitle}
         </p>
 
-        <div className="mx-auto mt-8 max-w-md">
+        <div className="mx-auto mt-10 max-w-md">
           <WaitlistForm source="footer" />
         </div>
 
-        <p className="mx-auto mt-6 max-w-xl whitespace-pre-line text-xs leading-relaxed text-muted-foreground/80">
+        <p className="mx-auto mt-7 max-w-xl whitespace-pre-line text-xs leading-relaxed text-[var(--muted)]">
           {dict.smallNote}
         </p>
       </div>
 
-      <footer className="border-t border-border/40">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-6 text-xs text-muted-foreground sm:flex-row sm:px-6">
+      <footer className="border-t border-[var(--line-2)] bg-[var(--bg)]">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-5 py-7 text-xs text-[var(--muted)] sm:flex-row sm:px-8">
           <div className="flex items-center gap-2">
-            <span className="font-semibold text-foreground">{t.meta.siteName}</span>
-            <span className="text-muted-foreground/60">·</span>
+            <span className="font-semibold text-[var(--ink)]">
+              {t.meta.siteName}
+            </span>
+            <span className="text-[var(--muted-2)]">·</span>
             <span>{f.tagline}</span>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-5">
             <Link
               href="https://twitter.com/opcdino_so"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 transition-colors hover:text-foreground"
+              className="inline-flex items-center gap-1.5 transition-colors hover:text-[var(--ink)]"
             >
               <BrandIcon slug="x" alt="Twitter" />
               {f.twitter}
@@ -69,14 +75,14 @@ export function FooterCTA() {
               href="https://github.com/opcdino"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 transition-colors hover:text-foreground"
+              className="inline-flex items-center gap-1.5 transition-colors hover:text-[var(--ink)]"
             >
               <BrandIcon slug="github" alt="GitHub" />
               {f.github}
             </Link>
             <Link
               href="mailto:hi@opc.dinolabs.online"
-              className="inline-flex items-center gap-1.5 transition-colors hover:text-foreground"
+              className="inline-flex items-center gap-1.5 transition-colors hover:text-[var(--ink)]"
             >
               <Mail className="h-3.5 w-3.5" />
               {f.email}

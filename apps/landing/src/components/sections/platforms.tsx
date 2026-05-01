@@ -1,6 +1,5 @@
 import { t } from "@/i18n";
 import { platforms } from "@/lib/platforms";
-import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 
 /** 每个平台的发布状态 — 决定徽章显示 */
@@ -27,17 +26,17 @@ const STATUS: Record<string, Status> = {
   zhihu: "draft",
 };
 
-/** 没有 simple-icons 的中国平台用文字 + 颜色徽章兜底 */
+/** 没有 simple-icons 的中国平台用文字 + 颜色徽章兜底（light theme） */
 const FALLBACK_BG: Record<string, string> = {
-  jike: "bg-yellow-500/15 text-yellow-300 border-yellow-500/30",
-  v2ex: "bg-zinc-500/15 text-zinc-200 border-zinc-500/30",
-  linkedin: "bg-sky-600/20 text-sky-300 border-sky-500/30",
+  jike: "bg-amber-50 text-amber-700 border-amber-200",
+  v2ex: "bg-zinc-100 text-zinc-700 border-zinc-300",
+  linkedin: "bg-sky-50 text-sky-700 border-sky-200",
 };
 
-const STATUS_VARIANT: Record<Status, "default" | "secondary" | "outline"> = {
-  api: "default",
-  semi: "secondary",
-  draft: "outline",
+const STATUS_STYLE: Record<Status, string> = {
+  api: "bg-[var(--brand-dim)] text-[var(--brand)] border-[var(--brand)]/20",
+  semi: "bg-[var(--bg-2)] text-[var(--ink-2)] border-[var(--line)]",
+  draft: "bg-transparent text-[var(--muted)] border-[var(--line)]",
 };
 
 function PlatformCard({
@@ -53,12 +52,12 @@ function PlatformCard({
   const statusLabel = t.platforms.statusLabels[status];
 
   return (
-    <div className="group relative flex flex-col items-center justify-between gap-3 rounded-xl border border-border/60 bg-card/40 p-4 backdrop-blur transition-colors hover:border-border">
+    <div className="group relative flex flex-col items-center justify-between gap-3 rounded-2xl border border-[var(--line)] bg-[var(--bg-1)] p-5 transition-all hover:border-[var(--brand)]/40 hover:bg-white">
       <div className="flex h-10 w-10 items-center justify-center">
         {icon ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
-            src={`https://cdn.simpleicons.org/${icon}/ffffff`}
+            src={`https://cdn.simpleicons.org/${icon}/111827`}
             alt={name}
             width={32}
             height={32}
@@ -67,18 +66,23 @@ function PlatformCard({
         ) : (
           <span
             className={cn(
-              "grid h-9 w-9 place-items-center rounded-md border text-xs font-semibold",
-              FALLBACK_BG[slug] ?? "bg-secondary/40 text-secondary-foreground border-border/40",
+              "grid h-9 w-9 place-items-center rounded-xl border text-xs font-semibold",
+              FALLBACK_BG[slug] ?? "bg-white text-[var(--ink)] border-[var(--line)]",
             )}
           >
             {name.slice(0, 2)}
           </span>
         )}
       </div>
-      <div className="text-sm font-medium text-foreground">{name}</div>
-      <Badge variant={STATUS_VARIANT[status]} className="text-[10px]">
+      <div className="text-sm font-medium text-[var(--ink)]">{name}</div>
+      <span
+        className={cn(
+          "inline-flex items-center rounded-full border px-2 py-0.5 text-[10px] font-medium",
+          STATUS_STYLE[status],
+        )}
+      >
         {statusLabel}
-      </Badge>
+      </span>
     </div>
   );
 }
@@ -91,25 +95,25 @@ export function Platforms() {
   return (
     <section
       id="platforms"
-      className="border-t border-border/50 bg-background py-20 sm:py-28"
+      className="border-t border-[var(--line-2)] bg-[var(--bg)] py-24 sm:py-32"
     >
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
+          <h2 className="text-balance font-medium tracking-[-0.02em] text-[var(--ink)] text-3xl sm:text-4xl md:text-5xl">
             {dict.title}
           </h2>
-          <p className="mt-3 text-balance text-muted-foreground">
+          <p className="mt-4 text-balance text-base text-[var(--muted)]">
             {dict.subtitle}
           </p>
         </div>
 
         {/* 海外 */}
-        <div className="mt-12">
-          <div className="mb-4 flex items-center gap-3">
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+        <div className="mt-14">
+          <div className="mb-5 flex items-center gap-3">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--muted-2)]">
               {dict.overseasLabel}
             </h3>
-            <span className="text-xs text-muted-foreground/60">
+            <span className="text-xs text-[var(--muted-2)]">
               · {overseas.length} 个
             </span>
           </div>
@@ -122,11 +126,11 @@ export function Platforms() {
 
         {/* 中国 */}
         <div className="mt-12">
-          <div className="mb-4 flex items-center gap-3">
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+          <div className="mb-5 flex items-center gap-3">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--muted-2)]">
               {dict.chinaLabel}
             </h3>
-            <span className="text-xs text-muted-foreground/60">
+            <span className="text-xs text-[var(--muted-2)]">
               · {china.length} 个
             </span>
           </div>
@@ -138,7 +142,7 @@ export function Platforms() {
         </div>
 
         {/* 透明声明 */}
-        <p className="mx-auto mt-12 max-w-3xl rounded-lg border border-border/40 bg-muted/20 p-4 text-center text-xs leading-relaxed text-muted-foreground">
+        <p className="mx-auto mt-14 max-w-3xl rounded-2xl border border-[var(--line)] bg-[var(--bg-1)] p-5 text-center text-xs leading-relaxed text-[var(--muted)]">
           {dict.transparencyNote}
         </p>
       </div>

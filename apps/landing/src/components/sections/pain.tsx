@@ -1,6 +1,5 @@
 import { Clock, Languages, Megaphone } from "lucide-react";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { t } from "@/i18n";
 
 const icons = [Megaphone, Clock, Languages];
@@ -8,37 +7,35 @@ const icons = [Megaphone, Clock, Languages];
 export function Pain() {
   const dict = t.pain;
   return (
-    <section className="border-t border-border/50 bg-background py-20 sm:py-28">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+    <section className="border-t border-[var(--line-2)] bg-[var(--bg)] py-24 sm:py-32">
+      <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
+          <h2 className="text-balance font-medium tracking-[-0.02em] text-[var(--ink)] text-3xl sm:text-4xl md:text-5xl">
             {dict.title}
           </h2>
-          <p className="mt-3 text-balance text-muted-foreground">
+          <p className="mt-4 text-balance text-base text-[var(--muted)]">
             {dict.subtitle}
           </p>
         </div>
 
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {dict.items.map((item, i) => {
             const Icon = icons[i] ?? Megaphone;
             return (
-              <Card
+              <div
                 key={i}
-                className="border-border/60 bg-card/40 backdrop-blur transition-colors hover:border-border"
+                className="rounded-2xl border border-[var(--line)] bg-[var(--bg-1)] p-7 transition-colors hover:border-[var(--brand)]/40"
               >
-                <CardHeader>
-                  <div className="mb-3 grid h-10 w-10 place-items-center rounded-lg bg-secondary text-secondary-foreground">
-                    <Icon className="h-5 w-5" />
-                  </div>
-                  <CardTitle className="text-lg">{item.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground">
-                    {item.description}
-                  </p>
-                </CardContent>
-              </Card>
+                <div className="mb-5 grid h-11 w-11 place-items-center rounded-2xl bg-white text-[var(--brand)] border border-[var(--line)]">
+                  <Icon className="h-5 w-5" />
+                </div>
+                <h3 className="text-lg font-semibold text-[var(--ink)]">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">
+                  {item.description}
+                </p>
+              </div>
             );
           })}
         </div>

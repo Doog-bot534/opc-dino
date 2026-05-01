@@ -5,7 +5,6 @@ import { Loader2, Mail } from "lucide-react";
 import { toast } from "sonner";
 import { z } from "zod";
 
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { t } from "@/i18n";
 import { cn } from "@/lib/utils";
@@ -92,7 +91,7 @@ export function WaitlistForm({
       )}
     >
       <div className="relative flex-1">
-        <Mail className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+        <Mail className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-[var(--muted-2)]" />
         <Input
           type="email"
           inputMode="email"
@@ -102,25 +101,27 @@ export function WaitlistForm({
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           disabled={submitting}
-          className="h-11 pl-9"
+          className="h-12 rounded-full border-[var(--line)] bg-white pl-10 pr-4 text-[var(--ink)] placeholder:text-[var(--muted-2)] focus-visible:border-[var(--brand)] focus-visible:ring-[var(--brand)]/20"
           aria-label={dict.placeholder}
         />
       </div>
-      <Button
+      <button
         type="submit"
-        size="lg"
         disabled={submitting}
-        className={cn("h-11", stacked ? "w-full" : "sm:w-auto")}
+        className={cn(
+          "inline-flex h-12 items-center justify-center gap-1.5 rounded-full bg-[var(--ink)] px-6 text-sm font-medium text-[var(--bg)] transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60",
+          stacked ? "w-full" : "sm:w-auto",
+        )}
       >
         {submitting ? (
           <>
-            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+            <Loader2 className="mr-1.5 h-4 w-4 animate-spin" />
             {dict.submitting}
           </>
         ) : (
           dict.submit
         )}
-      </Button>
+      </button>
     </form>
   );
 }
