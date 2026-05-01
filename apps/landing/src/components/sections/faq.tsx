@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { ChapterHead } from "@/components/chapter-head";
 import { t } from "@/i18n";
 
 export function FAQ() {
@@ -11,22 +12,25 @@ export function FAQ() {
   return (
     <section
       id="faq"
-      className="border-t border-[var(--line-2)] bg-[var(--bg)] py-24 sm:py-32"
+      className="border-t border-[var(--line-2)] bg-[var(--bg)] py-24 sm:py-28"
     >
       <div className="mx-auto max-w-3xl px-5 sm:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-balance font-medium tracking-[-0.02em] text-[var(--ink)] text-3xl sm:text-4xl md:text-5xl">
-            {dict.title}
-          </h2>
-          <p className="mt-4 text-balance text-base text-[var(--muted)]">
-            {dict.subtitle}
-          </p>
-        </div>
+        <ChapterHead
+          n="/ 05"
+          t="FAQ"
+          cn="你可能在想的几个问题"
+          aside="§ / asked & answered"
+        />
+
+        <p className="reveal mb-10 text-base text-[var(--muted)]">
+          都是<span className="mark"> 我们自己 </span>
+          <span className="fade">问过自己的。</span>
+        </p>
 
         <Accordion
           type="single"
           collapsible
-          className="mt-12 rounded-2xl border border-[var(--line)] bg-[var(--bg-1)] px-6"
+          className="reveal d1 rounded-2xl border border-[var(--line)] bg-[var(--bg-1)] px-6"
         >
           {dict.items.map((item, i) => (
             <AccordionItem

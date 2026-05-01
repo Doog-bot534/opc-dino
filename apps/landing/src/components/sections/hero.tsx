@@ -1,11 +1,21 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 import { t } from "@/i18n";
 
+/**
+ * Hero — dinolabs style
+ *
+ * Layout (≥1024px): 1.15fr | 0.85fr   left = content, right = terminal
+ * Mobile: single column, terminal stacks below
+ *
+ * Signature dinolabs touches:
+ *   - mono eyebrow with brand-blue brackets
+ *   - H1 with .mark (brand) and .fade (muted) inline word highlighting
+ *   - dark terminal block (visual anchor in an otherwise light page)
+ */
 export function Hero() {
   const dict = t.hero;
   const count = t.meta.waitlistCount;
@@ -26,67 +36,113 @@ export function Hero() {
         className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,rgba(17,24,39,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(17,24,39,0.05)_1px,transparent_1px)] bg-[size:48px_48px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_40%,transparent_100%)]"
       />
 
-      <div className="mx-auto flex max-w-5xl flex-col items-center px-5 pt-24 pb-28 text-center sm:px-8 sm:pt-32 sm:pb-36">
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-        >
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-[var(--line)] bg-white/60 px-3 py-1 text-xs font-medium text-[var(--ink-2)] backdrop-blur">
-            <Sparkles className="h-3 w-3 text-[var(--brand)]" />
-            {dict.badge}
+      <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 pt-24 pb-24 sm:px-8 sm:pt-32 sm:pb-32 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10">
+        {/* Left — content */}
+        <div className="flex flex-col">
+          <span className="hero-eyebrow reveal">
+            <span className="bracket">[</span>
+            <span>独立开发者 · indie launch tool</span>
+            <span className="bracket">]</span>
           </span>
-        </motion.div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.05 }}
-          className="mt-7 text-balance font-medium text-[var(--ink)] text-[44px] leading-[1.02] tracking-[-0.02em] sm:text-6xl md:text-7xl lg:text-[88px] lg:leading-[0.98]"
-        >
-          {dict.title}
-        </motion.h1>
+          <h1 className="reveal d1 mt-7 text-balance font-medium text-[var(--ink)] text-[44px] leading-[1.02] tracking-[-0.02em] sm:text-6xl md:text-[64px] lg:text-[72px] lg:leading-[0.98]">
+            <span className="mark">一个 URL</span>
+            <span className="fade">，发到 </span>
+            <span className="mark">10+ 平台</span>
+            <span className="fade">。</span>
+          </h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="mt-6 max-w-2xl text-balance text-base text-[var(--muted)] sm:text-lg"
-        >
-          {dict.subtitle}
-        </motion.p>
+          <p className="reveal d2 mt-6 max-w-xl text-balance text-base text-[var(--muted)] sm:text-lg">
+            AI 把你的产品拆成 <em className="brand">10+ 平台原生内容包</em>{" "}
+            — <span className="mark">海外</span>、
+            <span className="mark">中国</span>，一套搞定。
+          </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.15 }}
-          className="mt-10 flex w-full flex-col items-center justify-center gap-3 sm:w-auto sm:flex-row"
-        >
-          <Link
-            href="#waitlist"
-            className="inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-[var(--ink)] px-8 py-3.5 text-base font-medium text-[var(--bg)] transition-opacity hover:opacity-90 sm:w-auto"
-          >
-            {dict.ctaPrimary}
-            <ArrowRight className="h-4 w-4" />
-          </Link>
-          <Link
-            href="#solution"
-            className="inline-flex w-full items-center justify-center rounded-full border border-[var(--line)] bg-transparent px-8 py-3.5 text-base font-medium text-[var(--ink)] transition-colors hover:bg-[var(--bg-1)] sm:w-auto"
-          >
-            {dict.ctaSecondary}
-          </Link>
-        </motion.div>
+          <div className="reveal d3 mt-10 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
+            <Link
+              href="#waitlist"
+              className="inline-flex items-center justify-center gap-1.5 rounded-full bg-[var(--ink)] px-7 py-3.5 text-base font-medium text-[var(--bg)] transition-opacity hover:opacity-90"
+            >
+              {dict.ctaPrimary}
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+            <Link
+              href="#solution"
+              className="inline-flex items-center justify-center rounded-full border border-[var(--line)] bg-transparent px-7 py-3.5 text-base font-medium text-[var(--ink)] transition-colors hover:bg-[var(--bg-1)]"
+            >
+              {dict.ctaSecondary}
+            </Link>
+          </div>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.25 }}
-          className="mt-7 text-xs text-[var(--muted)]"
-        >
-          <span className="font-semibold text-[var(--ink)]">+{count}</span>{" "}
-          {t.waitlistForm.countSuffix}
-          {dict.socialProof ? ` · ${dict.socialProof}` : null}
-        </motion.p>
+          <p className="reveal d4 mt-6 text-xs text-[var(--muted)]">
+            <span className="font-semibold text-[var(--ink)]">+{count}</span>{" "}
+            {t.waitlistForm.countSuffix}
+            {dict.socialProof ? (
+              <>
+                {" · "}
+                <span className="fade">{dict.socialProof}</span>
+              </>
+            ) : null}
+          </p>
+        </div>
+
+        {/* Right — terminal */}
+        <aside className="terminal reveal d2 mx-auto w-full lg:mx-0" aria-hidden>
+          <div className="term-chrome">
+            <span className="d" />
+            <span className="d" />
+            <span className="d" />
+            <span className="title">~ opc@dino · launch.sh</span>
+            <span className="meta">zsh</span>
+          </div>
+          <div className="term-body">
+            <div className="term-line">
+              <span className="prompt">$</span>
+              <span className="user">opcdino launch </span>
+              <span className="accent">https://your-product.com</span>
+            </div>
+            <div className="term-line">
+              <span className="dim">  → 抓取产品页面，提炼卖点 / 用户画像…</span>
+            </div>
+            <div className="term-line">
+              <span className="ok">✓</span>
+              Reddit <span className="dim">r/SideProject</span> ·{" "}
+              <span className="str">487 chars</span>
+            </div>
+            <div className="term-line">
+              <span className="ok">✓</span>
+              X thread · <span className="str">8 posts</span>
+            </div>
+            <div className="term-line">
+              <span className="ok">✓</span>
+              即刻 · <span className="str">270 字</span>{" "}
+              <span className="dim">with hooks</span>
+            </div>
+            <div className="term-line">
+              <span className="ok">✓</span>
+              V2EX · <span className="str">720 chars</span>{" "}
+              <span className="dim">tech-style</span>
+            </div>
+            <div className="term-line">
+              <span className="ok">✓</span>
+              Dev.to · <span className="str">1500 chars</span>{" "}
+              <span className="dim">markdown</span>
+            </div>
+            <div className="term-line">
+              <span className="arrow">→</span>
+              <span className="dim">5 platforms ready · 7 待人工 review</span>
+            </div>
+            <div className="term-line">
+              <span className="accent">●</span> <span className="user">RUNNING</span>
+            </div>
+          </div>
+          <div className="term-footer">
+            <span>next 16 · drizzle · resend</span>
+            <span>
+              <span className="val">●</span>WAITLIST
+            </span>
+          </div>
+        </aside>
       </div>
     </section>
   );

@@ -1,7 +1,11 @@
-import { ArrowRight, Globe2, Link2, Sparkles } from "lucide-react";
+import { ChapterHead } from "@/components/chapter-head";
 import { t } from "@/i18n";
 
-const stepIcons = [Link2, Sparkles, Globe2];
+const KEYS = [
+  { k: "/ step.01", en: "Paste a URL." },
+  { k: "/ step.02", en: "AI splits it 10+ ways." },
+  { k: "/ step.03", en: "Publish + collect." },
+];
 
 export function Solution() {
   const dict = t.solution;
@@ -9,61 +13,53 @@ export function Solution() {
   return (
     <section
       id="solution"
-      className="border-t border-[var(--line-2)] bg-[var(--bg)] py-24 sm:py-32"
+      className="border-t border-[var(--line-2)] bg-[var(--bg)] py-24 sm:py-28"
     >
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-balance font-medium tracking-[-0.02em] text-[var(--ink)] text-3xl sm:text-4xl md:text-5xl">
-            {dict.title}
-          </h2>
-          <p className="mt-4 text-balance text-base text-[var(--muted)]">
-            {dict.subtitle}
-          </p>
-        </div>
+        <ChapterHead
+          n="/ 02"
+          t="SOLUTION"
+          cn="把 launch 做成流水线"
+          aside="§ / one URL → 10+ posts"
+        />
 
-        {/* 流程图：URL → AI → 多平台 */}
-        <div className="mt-14 grid items-stretch gap-5 md:grid-cols-3">
+        <p className="reveal mx-auto mb-12 max-w-3xl text-balance text-lg leading-relaxed text-[var(--ink-2)] sm:text-xl">
+          你只做<span className="mark"> 一件事</span>
+          <span className="fade">：贴上产品 URL。</span>剩下的{" "}
+          <em className="brand">拆解 / 撰写 / 发布 / 回收数据</em>，AI 接管。
+          <span className="block mt-2 text-sm text-[var(--muted)]">
+            {dict.subtitle}
+          </span>
+        </p>
+
+        <div className="principles reveal d1">
           {dict.steps.map((step, i) => {
-            const Icon = stepIcons[i] ?? Sparkles;
+            const meta = KEYS[i] ?? { k: `/ step.0${i + 1}`, en: "" };
             return (
-              <div
-                key={i}
-                className="relative flex flex-col rounded-2xl border border-[var(--line)] bg-[var(--bg-1)] p-7"
-              >
-                <div className="mb-5 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.12em] text-[var(--muted-2)]">
-                  <span className="grid h-7 w-7 place-items-center rounded-full bg-[var(--brand-dim)] text-[11px] font-semibold text-[var(--brand)]">
-                    {i + 1}
-                  </span>
-                  Step {i + 1}
-                </div>
-                <Icon className="mb-3 h-7 w-7 text-[var(--brand)]" />
-                <h3 className="text-lg font-semibold text-[var(--ink)]">
-                  {step.title}
+              <div key={i} className="principle">
+                <span className="k">{meta.k}</span>
+                <h3>
+                  <span>{step.title}</span>
+                  {meta.en ? <span className="en">{meta.en}</span> : null}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">
-                  {step.description}
-                </p>
-                {i < dict.steps.length - 1 ? (
-                  <ArrowRight
-                    aria-hidden
-                    className="absolute -right-3 top-1/2 hidden h-5 w-5 -translate-y-1/2 text-[var(--muted-2)] md:block"
-                  />
-                ) : null}
+                <p>{step.description}</p>
               </div>
             );
           })}
         </div>
 
-        {/* 代码示意 */}
-        <div className="mt-12 mx-auto max-w-3xl overflow-hidden rounded-2xl border border-[var(--line)] bg-white shadow-[0_1px_3px_rgba(17,24,39,0.04)]">
+        {/* Code/terminal mock — keep as visual anchor under principles */}
+        <div className="reveal d2 mt-12 mx-auto max-w-3xl overflow-hidden rounded-2xl border border-[var(--line)] bg-white shadow-[0_1px_3px_rgba(17,24,39,0.04)]">
           <div className="flex items-center gap-1.5 border-b border-[var(--line-2)] bg-[var(--bg-1)] px-4 py-2.5">
             <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
             <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
             <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
-            <span className="ml-3 text-xs text-[var(--muted)]">opc launch</span>
+            <span className="ml-3 font-[family-name:var(--font-geist-mono)] text-xs text-[var(--muted)]">
+              opc launch
+            </span>
           </div>
           <pre className="overflow-x-auto p-5 text-xs leading-relaxed sm:p-6 sm:text-sm">
-            <code className="font-mono text-[var(--muted)]">
+            <code className="font-[family-name:var(--font-geist-mono)] text-[var(--muted)]">
               <span className="text-[var(--brand)]">$</span> opc launch
               https://your-product.com{"\n"}
               <span className="text-[var(--muted-2)]">

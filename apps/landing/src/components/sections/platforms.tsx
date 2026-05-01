@@ -1,3 +1,4 @@
+import { ChapterHead } from "@/components/chapter-head";
 import { t } from "@/i18n";
 import { platforms } from "@/lib/platforms";
 import { cn } from "@/lib/utils";
@@ -95,20 +96,27 @@ export function Platforms() {
   return (
     <section
       id="platforms"
-      className="border-t border-[var(--line-2)] bg-[var(--bg)] py-24 sm:py-32"
+      className="border-t border-[var(--line-2)] bg-[var(--bg)] py-24 sm:py-28"
     >
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-balance font-medium tracking-[-0.02em] text-[var(--ink)] text-3xl sm:text-4xl md:text-5xl">
-            {dict.title}
-          </h2>
-          <p className="mt-4 text-balance text-base text-[var(--muted)]">
+        <ChapterHead
+          n="/ 03"
+          t="REACH"
+          cn="海外 + 中国，一套覆盖"
+          aside="§ / overseas + cn"
+        />
+
+        <p className="reveal mx-auto mb-12 max-w-3xl text-balance text-lg leading-relaxed text-[var(--ink-2)] sm:text-xl">
+          目前我们查到{" "}
+          <span className="mark">唯一同时认真做这两边</span>
+          <span className="fade"> 的工具。</span>
+          <span className="block mt-2 text-sm text-[var(--muted)]">
             {dict.subtitle}
-          </p>
-        </div>
+          </span>
+        </p>
 
         {/* 海外 */}
-        <div className="mt-14">
+        <div className="reveal d1 mt-4">
           <div className="mb-5 flex items-center gap-3">
             <h3 className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--muted-2)]">
               {dict.overseasLabel}
@@ -125,7 +133,7 @@ export function Platforms() {
         </div>
 
         {/* 中国 */}
-        <div className="mt-12">
+        <div className="reveal d2 mt-12">
           <div className="mb-5 flex items-center gap-3">
             <h3 className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--muted-2)]">
               {dict.chinaLabel}

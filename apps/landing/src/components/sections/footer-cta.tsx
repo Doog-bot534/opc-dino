@@ -36,18 +36,26 @@ export function FooterCTA() {
       />
 
       <div className="mx-auto max-w-3xl px-5 py-28 text-center sm:px-8 sm:py-36">
-        <h2 className="text-balance font-medium tracking-[-0.02em] text-[var(--ink)] text-3xl sm:text-5xl md:text-6xl">
-          {dict.title}
+        <span className="hero-eyebrow reveal mx-auto justify-center">
+          <span className="bracket">[</span>
+          <span>/ 06 · waitlist</span>
+          <span className="bracket">]</span>
+        </span>
+        <h2 className="reveal d1 mt-6 text-balance font-medium tracking-[-0.02em] text-[var(--ink)] text-3xl sm:text-5xl md:text-6xl">
+          先把<span className="mark">产品做完</span>
+          <span className="fade">，再来想推广 — </span>
+          <span className="mark">OPC.Dino</span>
+          <span className="fade"> 等你。</span>
         </h2>
-        <p className="mx-auto mt-5 max-w-xl text-balance text-base text-[var(--muted)] sm:text-lg">
+        <p className="reveal d2 mx-auto mt-5 max-w-xl text-balance text-base text-[var(--muted)] sm:text-lg">
           {dict.subtitle}
         </p>
 
-        <div className="mx-auto mt-10 max-w-md">
+        <div className="reveal d3 mx-auto mt-10 max-w-md">
           <WaitlistForm source="footer" />
         </div>
 
-        <p className="mx-auto mt-7 max-w-xl whitespace-pre-line text-xs leading-relaxed text-[var(--muted)]">
+        <p className="reveal d4 mx-auto mt-7 max-w-xl whitespace-pre-line text-xs leading-relaxed text-[var(--muted)]">
           {dict.smallNote}
         </p>
       </div>

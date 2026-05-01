@@ -5,6 +5,7 @@ import { Platforms } from "@/components/sections/platforms";
 import { Pricing } from "@/components/sections/pricing";
 import { FAQ } from "@/components/sections/faq";
 import { FooterCTA } from "@/components/sections/footer-cta";
+import { RevealOnScroll } from "@/components/reveal-on-scroll";
 import { SiteNav } from "@/components/site-nav";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
         <FAQ />
         <FooterCTA />
       </main>
+      <RevealOnScroll />
     </>
   );
 }

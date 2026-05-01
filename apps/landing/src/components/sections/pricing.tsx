@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Check } from "lucide-react";
 
+import { ChapterHead } from "@/components/chapter-head";
 import { t } from "@/i18n";
 import { cn } from "@/lib/utils";
 
@@ -10,19 +11,24 @@ export function Pricing() {
   return (
     <section
       id="pricing"
-      className="border-t border-[var(--line-2)] bg-[var(--bg)] py-24 sm:py-32"
+      className="border-t border-[var(--line-2)] bg-[var(--bg)] py-24 sm:py-28"
     >
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-balance font-medium tracking-[-0.02em] text-[var(--ink)] text-3xl sm:text-4xl md:text-5xl">
-            {dict.title}
-          </h2>
-          <p className="mt-4 text-balance text-sm text-[var(--muted)] sm:text-base">
-            {dict.subtitle}
-          </p>
-        </div>
+        <ChapterHead
+          n="/ 04"
+          t="PRICING"
+          cn="一档一档来"
+          aside="§ / BYO API key"
+        />
 
-        <div className="mx-auto mt-14 grid max-w-5xl gap-5 md:grid-cols-3">
+        <p className="reveal mx-auto mb-12 max-w-3xl text-balance text-lg leading-relaxed text-[var(--ink-2)] sm:text-xl">
+          不<span className="mark">强卖</span>
+          <span className="fade">。</span>所有档位都是{" "}
+          <em className="brand">BYO API key</em>
+          <span className="fade"> — 你自带 X / Reddit 账号，我们不替你买推文额度。</span>
+        </p>
+
+        <div className="reveal d1 mx-auto grid max-w-5xl gap-5 md:grid-cols-3">
           {dict.plans.map((plan) => {
             const recommended = plan.recommended;
             return (
