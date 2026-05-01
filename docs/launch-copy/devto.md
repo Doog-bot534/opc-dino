@@ -185,7 +185,7 @@ Pricing $19 / $29 / $59 per month, BYO API key throughout.
 
 If you've shipped anything indie and have opinions on the bets above — especially "you're wrong about BYO key" or "you're wrong about not chasing Xiaohongshu" — I'd love to hear it before I'm too deep in to course-correct cheaply.
 
-Waitlist: {{LANDING_URL}}
+Waitlist: https://opc.dinolabs.online
 
 Tags: #sideproject #indie #ai #saas
 ```

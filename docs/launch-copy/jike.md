@@ -25,7 +25,7 @@
 
 现在 Phase 0：landing + waitlist。前 100 名首年 5 折锁定。
 
-链接：{{LANDING_URL}}
+链接：https://opc.dinolabs.online
 
 build log 每两周一封，会公开数据。欢迎来锤。
 

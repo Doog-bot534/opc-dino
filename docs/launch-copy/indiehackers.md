@@ -118,7 +118,7 @@ What I'd Love Help With
 
 4. China rail veterans — if you've automated Jike, V2EX, or anything similar, what traps am I about to walk into?
 
-Waitlist: {{LANDING_URL}}
+Waitlist: https://opc.dinolabs.online
 
 I'll publish every Phase 0 metric publicly. If this fails (waitlist <50 in 2 weeks, hard gate), I'll write the postmortem here too.
 

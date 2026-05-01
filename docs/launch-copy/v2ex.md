@@ -96,7 +96,7 @@ Roadmap：
 - Revenue tracking — 不是核心痛点
 - Phase 3 变现段砍掉，专注前两段
 
-waitlist：{{LANDING_URL}}
+waitlist：https://opc.dinolabs.online
 
 欢迎技术层面拍砖：
 

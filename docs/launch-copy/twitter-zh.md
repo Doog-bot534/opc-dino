@@ -134,7 +134,7 @@ Roadmap：
 
 不做：affiliate、revenue tracking、分销 — 用 Stripe Atlas 自己解决就够。
 
-waitlist 链接：{{LANDING_URL}}
+waitlist 链接：https://opc.dinolabs.online
 ```
 
 ### 10/10 — CTA + RT

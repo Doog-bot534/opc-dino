@@ -20,7 +20,7 @@
 ## Main post
 
 ```
-TL;DR: Building OPC.Dino — paste your product URL, AI generates 10+ platform-native posts (Reddit / X / Threads / Dev.to + China's Jike / V2EX), one-click publish or one-click jump. BYO API key. $19/mo. Phase 0 waitlist now: {{LANDING_URL}}
+TL;DR: Building OPC.Dino — paste your product URL, AI generates 10+ platform-native posts (Reddit / X / Threads / Dev.to + China's Jike / V2EX), one-click publish or one-click jump. BYO API key. $19/mo. Phase 0 waitlist now: https://opc.dinolabs.online
 
 ---
 
@@ -90,7 +90,7 @@ Asks
 - If you're shipping to both global + China, how many tools are you running and how much does it cost you per month?
 - If you've dealt with China platform anti-bot (Jike, Xiaohongshu, Bilibili), I'd love to know which traps to avoid.
 
-Waitlist: {{LANDING_URL}}
+Waitlist: https://opc.dinolabs.online
 ```
 
 ---
